@@ -1,0 +1,24 @@
+#+TITLE: raros nigredo 
+#+OPTIONS:    H:3 num:nil toc:nil \n:t ::t |:t ^:t -:t f:t *:t tex:t d:(HIDE) tags:not-in-toc broken-links:t 
+#+author: son0p 
+#+EMAIL: fede2001@gmail.com  
+#+OPTIONS: email:t 
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="one.css"/>
+
+!MANTENGANSE RAROS! 
+
+ /publicado en la separata Medellín Vive la Música de Arcadia y la Secretaría de Cultura/
+
+ La Escuela de Experimentos es, en la infraestructura de formación de Medellín Viva la Música, un proyecto que se permite tomar riesgos y que altera la dinámica de un salón de clases formal. Entre errores y aciertos las búsquedas de los alumnos son las que guían el aprendizaje. El acto de experimentar es entonces una manera de conocer. Ante un propósito de esta naturaleza podríamos preguntarnos ¿pero qué es lo que hacen allí?. 
+
+  La respuesta a esta pregunta la inspiran sus habitantes; jóvenes casi niños que se maravillan ante la posibilidad de construir artefactos sonoros. Graham Moore, quien adaptó el guión para la película "El código enigma", sostenía en una mano el premio Oscar mientras su discurso invitaba: "¡Manténgase raros!, ¡manténgase diferentes!". Esta bienvenida a la extrañeza es justamente la que nos invita a anidar ideas inusuales y que cuestiona la homogenización del estudiante, que es cómoda para una institución pero sacrifica aspectos valiosos del alumno. 
+
+ Nuestra escuela tiene el escudo de habitar el tiempo libre de obligaciones académicas, los estudiantes nos revelan sus perplejidades y en un proceso de acompañamiento, algunas de ellas se concretan en proyectos, que acogen a otros jóvenes que tienen búsquedas similares. Es que –sí- , celebramos la diferencia, la capacidad de agruparnos y de argumentar. En el arte marcial Aikido se le da el nombre de "uke" a quien ayuda en el entrenamiento confrontando como rival temporal, ese rol de 'otro' que cuestiona es fundamental para crecer en un arte.
+
+  Un padre de familia podría sorprenderse al encontrar a sus hijos fascinados ante la ciencia de la computación. Asisten a un encuentro que llamamos Algo~Ritmos y que propone escribir código con funciones matemáticas para generar música bailable. El vértigo de escribir las líneas de programación en vivo, sumado a la emoción de escuchar cómo reaccionan los sonidos a los cambios que el joven programador escribe en la pantalla,  hacen de la experiencia puerta de entrada al mundo de la programación, disciplina que permite expresarse creativamente pero que estimula el trabajo colaborativo.
+
+ Me hace feliz recibir un correo de un aprendiz confesando su persistencia ante un problema que no ha logrado resolver, esto oxigena una sociedad que amplifica la comodidad. Dice Gastón Bachelard “Los ascensores destruyen los heroísmos de la escalera. Ya no tiene ningún mérito vivir cerca del cielo.” Nuestra escuela abraza lo difícil, pues uno se contagia cuando está cerca de otro que persevera;  efectivamente, es esta fuerza la que alimenta la creación de nuestros prototipos, instrumentos electrónicos mínimos, con botones de máquina de videojuegos, que son apretados frenéticamente por el ensamble de aprendices que están iniciándose en el sonido y la música.
+
+ Para crear es necesario tener al lado el recipiente de basura, pues equivocarse hace parte del proceso, llegamos ahora a un caso que es más complejo: ¡Dañando también se aprende! Quizá, después de todo, hay muchas pedagogías para escoger y lo que necesitamos es aprender a encontrar la que avive nuestra pasión. 
+ __{[[file:/home/ff/SyncDocs/capture.ldg::70316][7b32c47c]]  3 v}  
+
