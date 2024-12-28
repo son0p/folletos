@@ -5,8 +5,6 @@
 #+OPTIONS: email:t 
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="one.css"/>
 
-Guardian del lenguaje: operador de audio, refuerzo de audio, ¿Qué tiene que ver con mezcla? __{[[file:/home/ff/SyncDocs/capture.ldg::68104][c472725a]]  0.0100000000 p}  
-
 PENSUM 
    00 Entorno  
    10 Filosofía Mezcla como arte del engaño 
@@ -51,7 +49,8 @@ La mezcla como engaño
 
 En los conciertos los errores musicales son  amplificados. __{[[file:/home/ff/SyncDocs/capture.ldg::67786][f93b4445]]  10.0000000000 p}  
 
-Considerar el acto en vivo, ese pequeño cosmos que incluye el sonido en directo, como formato industrial, Tiny Desk __{[[file:/home/ff/SyncDocs/capture.ldg::67933][7bf3c3fe]]  10.0000000000 p}  
+Considerar el acto en vivo, ese pequeño cosmos que incluye el audio en directo, como formato industrial.
+   Referente que no usa refuerzo de audio Tiny Desk (NPR Music) __{[[file:/home/ff/SyncDocs/capture.ldg::67933][7bf3c3fe]]  10.0000000000 p}  
 
 Vamos de lo grueso a lo fino: 
    Estabilidad: Ir de lo terrible a lo decente en el menor tiempo posible, aprender a recuperarse (panic) Nos ocupamos de que todo suene, y lograr un balance que se mantenga. 
@@ -69,6 +68,8 @@ Sabemos que es imposible reproducir la mezcla que logra en su cabeza el director
 ¿Cuáles serían las cualidades del rol?  Tratemos de precisar algunos lugares comunes que responden a esta pregunta, /Visión general/ Aunque pareciera más el rol de manager, buena comunicación, guardián de una visión, administración de talento, tiempo. Adaptarse, modelos de cooperación. ¿Debe saber de música? (¿armonía?, ¿contrapunto?, ¿ritmo?, ¿forma? __{[[file:/home/ff/SyncDocs/capture.ldg::67282][31a3fd7f]]  10.1000000000 p}  
 
 ¿El rol del operador de audio particular es una ciencia? ¿un arte? ¿una técnica?.  No podemos responder con presición, preferimos catalogarla como una labor de posibilidades con la idea de lograr eficiente y contundentemente amplificar el gesto del artista. __{[[file:/home/ff/SyncDocs/capture.ldg::67300][a3ac72ca]]  10.1000000000 p}  
+
+En el rol de guardian del lenguaje diferencia entre audio y sonido, detallando que sonido incluye las frecuencias inaudibles y el audio acota al sonido en las frecuencias audibles, entonces, para efectos de este folleto, se hace referencia a  operador de /audio/, refuerzo de /audio/, ¿Qué tiene que ver con mezcla? __{[[file:/home/ff/SyncDocs/capture.ldg::68104][c472725a]]  10.1100000000 p}  
 
 Nos educamos en bares con condiciones acústicas retadoras y equipos limitados. Se requieren destrezas diferentes entre conducir un carro de rodillos y una tractomula. ¿qué cambia? __{[[file:/home/ff/SyncDocs/capture.ldg::67396][640fe9f7]]  30.0000000000 p}  
 
