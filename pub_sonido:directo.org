@@ -1,6 +1,6 @@
-#+TITLE: sonido:directo albedo 
+#+TITLE: . 
 #+OPTIONS:    H:3 num:nil toc:nil \n:t ::t |:t ^:t -:t f:t *:t tex:t d:(HIDE) tags:not-in-toc broken-links:t 
-#+author: son0p 
+#+author: son0p  
 #+EMAIL: fede2001@gmail.com  
 #+OPTIONS: email:t 
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="one.css"/>
@@ -58,16 +58,17 @@ Vamos de lo grueso a lo fino:
    Riesgo: Exageramos algunos procedimientos intentando expandir el gesto emotivo de la obra. 
    Identidad: Tomamos decisiones radicales con respaldo técnico para amplificar lo que es único, tanto en el ensamble como en el operador de audio. __{[[file:/home/ff/SyncDocs/capture.ldg::67466][95a6aa9a]]  10.0100000000 p}  
 
-Sabemos que es imposible reproducir la mezcla que logra en su cabeza el director del ensamble acústico, pero con algunas herramientas podemos lograr un planteamiento de mezcla ficticio que pueda expandir la intención emotiva del director. __{[[file:/home/ff/SyncDocs/capture.ldg::68257][e94aca72]]  10.0110000000 p}  
+Sabemos que es imposible replicar con exactitud la mezcla concebida en la mente del director del ensamble acústico. Sin embargo, con ciertas herramientas, podemos crear una propuesta de mezcla ficticia que amplifique y enriquezca la intención emotiva del director.. __{[[file:/home/ff/SyncDocs/capture.ldg::68257][e94aca72]]  10.0110000000 p}  
 
-¿Sirve ese cargo en medellín? ¿en qué casos sirve y en qué casos no?  ¿A qué problema responde ese cargo?. 
-   Para iniciar tratemos de describir el problema con esta apreciación sobre el cargo de productor musical  "I agree. Producers are basically like a temporary member of the band, and they are there to bring new arrangement, recording, and songwriting ideas to the table. Everyone isn't a producer." --Kgroover  
- Ser otro miembro de la banda ¿qué implica en la operación de audio en directo?  
- Pero, ¿hacemos seguimiento  a lo que sucede despues? __{[[file:/home/ff/SyncDocs/capture.ldg::67244][9ad1a37d]]  10.0200000000 p}  
+¿Es relevante el cargo de Operador de Audio Particular en Medellín? ¿En qué contextos resulta útil y en cuáles no? ¿A qué necesidad específica responde esta figura?. 
+   Para iniciar reflexionemos sobre el problema a partir de esta apreciación sobre el rol de un /Productor Musical/ 
+ "I agree. Producers are basically like a temporary member of the band, and they are there to bring new arrangement, recording, and songwriting ideas to the table. Everyone isn't a producer." --Kgroover  
+ Si asumimos que el operador de audio en directo puede ser considerado "otro miembro de la banda", ¿cómo impacta esto en la operación técnica y creativa durante un evento en vivo?  
+ Además nos preguntamos, ¿hacemos seguimiento a lo que sucede despues? __{[[file:/home/ff/SyncDocs/capture.ldg::67244][9ad1a37d]]  10.0200000000 p}  
 
 ¿Cuáles serían las cualidades del rol?  Tratemos de precisar algunos lugares comunes que responden a esta pregunta, /Visión general/ Aunque pareciera más el rol de manager, buena comunicación, guardián de una visión, administración de talento, tiempo. Adaptarse, modelos de cooperación. ¿Debe saber de música? (¿armonía?, ¿contrapunto?, ¿ritmo?, ¿forma? __{[[file:/home/ff/SyncDocs/capture.ldg::67282][31a3fd7f]]  10.1000000000 p}  
 
-¿El rol del operador de audio particular es una ciencia? ¿un arte? ¿una técnica?.  No podemos responder con presición, preferimos catalogarla como una labor de posibilidades con la idea de lograr eficiente y contundentemente amplificar el gesto del artista. __{[[file:/home/ff/SyncDocs/capture.ldg::67300][a3ac72ca]]  10.1000000000 p}  
+¿El rol del /Operador de Audio Particular/ es una ciencia, un arte o una técnica?.  No podemos responder con presición, preferimos catalogarla como una labor llena de posibilidades orientada a amplificar de manera eficiente y contundentemente amplificar el gesto del artístico del intérprete. __{[[file:/home/ff/SyncDocs/capture.ldg::67300][a3ac72ca]]  10.1000000000 p}  
 
 En el rol de guardian del lenguaje diferencia entre audio y sonido, detallando que sonido incluye las frecuencias inaudibles y el audio acota al sonido en las frecuencias audibles, entonces, para efectos de este folleto, se hace referencia a  operador de /audio/, refuerzo de /audio/, ¿Qué tiene que ver con mezcla? __{[[file:/home/ff/SyncDocs/capture.ldg::68104][c472725a]]  10.1100000000 p}  
 
