@@ -5,42 +5,6 @@
 #+OPTIONS: email:t 
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="one.css"/>
 
-PENSUM 
-   00 Entorno  
-   10 Filosofía Mezcla como arte del engaño 
-   30 Técnicas 
-     .0 Entorno
-     .0010 Distribucion 
-     .001005 crossover 
-     .001010 PA 
-     .001011 subs
-     .001012 demorados 
-     .001020  monitoreo 
-     .531 fuentes 
-      .53105 coro 
-     .532 pre/consola 
-     .533 procesadores 
-     .53310 compresor 
-     .534 medidores 
-     .550 abrir/cerrar la mezcla 
-   40 Ustedes 
-   .4 la propia voz 
-   50 Herramientas .10 Diagrama/Score  
-   60 Detonantes 
-   70 Desconocido  
-   80 Entrenamiento/Prácticas 
-   90 Apéndices 
-   .00 rider 
-   .20 relaciones y roles 
-   .30 Ecuaciones  
-   .60 subs 
-   .70 mics
-   .80 produccion 
-   .90 bibliografía __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::3089][45fec3a3]]  0.1000000000 p}  
-
-"Bajo estrés no te elevas al nivel de tus expectativas, sino que caes al nivel de tu preparación real" A.Skif
- __{[[file:/home/ff/SyncDocs/FLC_informacion.ldg::35][0b6cda5e]]  0.2000000000 p}  
-
 La mezcla como engaño 
    Ante la imposibilidad de reproducir la magnitud y resolución de la realidad, le queda al mezclador de audio solo un camino digno, que es construir un panorama sonoro ficticio, haciendose a herramientas de engaño, como filtros,  ambientes artificiales y balances postizos. 
    Al abandonar la oscura búsqueda de imitar pobremente la realidad, se nos abren infinitas posibilidades para la ficción sonora. 
@@ -60,15 +24,15 @@ Vamos de lo grueso a lo fino:
 
 Sabemos que es imposible replicar con exactitud la mezcla concebida en la mente del director del ensamble acústico. Sin embargo, con ciertas herramientas, podemos crear una propuesta de mezcla ficticia que amplifique y enriquezca la intención emotiva del director.. __{[[file:/home/ff/SyncDocs/capture.ldg::68257][e94aca72]]  10.0110000000 p}  
 
-¿Es relevante el cargo de Operador de Audio Particular en Medellín? ¿En qué contextos resulta útil y en cuáles no? ¿A qué necesidad específica responde esta figura?. 
+¿Es relevante el cargo de /Operador de Audio Particular/ en Medellín? ¿En qué contextos resulta útil y en cuáles no? ¿A qué necesidad específica responde esta figura?. 
    Para iniciar reflexionemos sobre el problema a partir de esta apreciación sobre el rol de un /Productor Musical/ 
  "I agree. Producers are basically like a temporary member of the band, and they are there to bring new arrangement, recording, and songwriting ideas to the table. Everyone isn't a producer." --Kgroover  
- Si asumimos que el operador de audio en directo puede ser considerado "otro miembro de la banda", ¿cómo impacta esto en la operación técnica y creativa durante un evento en vivo?  
+ Si asumimos que el /Operador de Audio en Particular/ puede ser considerado "otro miembro de la banda", ¿cómo impacta esto en la operación técnica y creativa durante un evento en vivo?  
  Además nos preguntamos, ¿hacemos seguimiento a lo que sucede despues? __{[[file:/home/ff/SyncDocs/capture.ldg::67244][9ad1a37d]]  10.0200000000 p}  
 
 ¿Cuáles serían las cualidades del rol?  Tratemos de precisar algunos lugares comunes que responden a esta pregunta, /Visión general/ Aunque pareciera más el rol de manager, buena comunicación, guardián de una visión, administración de talento, tiempo. Adaptarse, modelos de cooperación. ¿Debe saber de música? (¿armonía?, ¿contrapunto?, ¿ritmo?, ¿forma? __{[[file:/home/ff/SyncDocs/capture.ldg::67282][31a3fd7f]]  10.1000000000 p}  
 
-¿El rol del /Operador de Audio Particular/ es una ciencia, un arte o una técnica?.  No podemos responder con presición, preferimos catalogarla como una labor llena de posibilidades orientada a amplificar de manera eficiente y contundentemente amplificar el gesto del artístico del intérprete. __{[[file:/home/ff/SyncDocs/capture.ldg::67300][a3ac72ca]]  10.1000000000 p}  
+¿El rol del /Operador de Audio Particular/ es una ciencia, un arte o una técnica?.  No podemos responder con precisión, preferimos catalogarla como una labor llena de posibilidades orientada a amplificar de manera eficiente y contundentemente amplificar el gesto del artístico del intérprete. __{[[file:/home/ff/SyncDocs/capture.ldg::67300][a3ac72ca]]  10.1000000000 p}  
 
 En el rol de guardian del lenguaje diferencia entre audio y sonido, detallando que sonido incluye las frecuencias inaudibles y el audio acota al sonido en las frecuencias audibles, entonces, para efectos de este folleto, se hace referencia a  operador de /audio/, refuerzo de /audio/, ¿Qué tiene que ver con mezcla? __{[[file:/home/ff/SyncDocs/capture.ldg::68104][c472725a]]  10.1100000000 p}  
 
@@ -124,8 +88,6 @@ Es necesario negociar con el instrumentista y el Operador de monitores para mete
 
 FUENTES                        __{[[file:/home/ff/SyncDocs/capture.ldg::68518][14efaa95]]  30.5310000000 p}  
 
-De Steve Albini debemos considerar los micrófonos de cinta, la idea de batería como un solo instrumento, el uso de micrófonos distantes. __{[[file:/home/ff/SyncDocs/FLC_informacion.ldg::380][2383ad53]]  30.5310100000 p}  
-
 Mezclando desde la fuente ¿Capturar una fuente acústica? ¿Cómo se decide la posición del micrófono? ¿qué tanto influye? ¿cuando de contacto? ¿patrón polar? ¿distancia? Cada que duplique la distancia de la fuente pierde la mitad de la presión sonora. 
      Entonces para amplificar va a ser necesario tener los micrófonos más cerca de los instrumentos, caso contrario a la grabación o transmisión de TV sin amplificación, donde pueden posicionarse los micrófonos a más distancia. __{[[file:/home/ff/SyncDocs/capture.ldg::67366][15050d36]]  30.5310100000 p}  
 
@@ -140,8 +102,6 @@ Liberar los filtros del los micrófonos aéreos trae mucha información ambienta
 El operador de audio supone que una posición de micrófono o micrófono funciona y ese deseo puede ser tan fuerte que le impide escuchar que no funciona. En la plazoleta del edificio inteligente probaba sonido herencia de Tinmbiquí, llegamos a la marimba, el ruteador había seleccionado los mejores condensadores como de costumbre con la marimba sinfónica, fué el consejero de sonido de parte del grupo que preguntó ¿qué micrófonos tiene? ¿suena raro tienes dos 57? se trata de selva. En otra ocasión solo piano para Teresita Gómez salio a sala a escuchar y me preguntaba, ¿porqué suena tan brillante? refriendose a un exceso en altas frecuencias. __{[[file:/home/ff/SyncDocs/capture.ldg::68221][5b3eef97]]  30.5310200000 p}  
 
 Pasé un largo período luchando con cada una de las piezas de la batería, como fila ordenada fuí aprendiendo a relacionarme con el bombo primero, los toms, redoblante (con quien aún estoy construyendo nuestra relación) y por último los volubles micrófonos aéreos, fueron éstos últimos los que me brindaron, de la mano de Kiko Castro, la liberadora necesidad de tratar la batería como un solo instrumento. __{[[file:/home/ff/SyncDocs/capture.ldg::67826][59a2aa01]]  30.5310400000 p}  
-
-La cámara acústica de un micrófono tiene influencia en su sonido, ohma invita a  experimentar con diferentes obstaculos para lograr respuestas únicas __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1266][eb7fb984]]  30.5310400000 p}  
 
 Sobre algunos instrumentos acústicos, 
  Coros, si la cantidad de micrófonos es limitada se puede ubicar los micrófonos puntuales en las mejores voces, esto puede generar frustración en los cantantes que no tengan micrófono al frente, para disminuír el impacto de este fenómeno psicológico podemos poner una voz selecionada al centro y mirando al frente del microfono y dos voces no seleccionadas a cada lado, de esta manera tendrémos más presencia de la voz seleccionada y menos de las voces no seleccionadas. 
@@ -177,22 +137,6 @@ Se preguntará usted, ¿Porqué disminuír el rango dinámico? ¿Es acaso sombri
 == COMPRESOR                   __{[[file:/home/ff/SyncDocs/capture.ldg::68356][8ed886a0]]  30.5331000000 p}  
 
 "Compresor is for Kids" dice Bruce Sweeden. __{[[file:/home/ff/SyncDocs/capture.ldg::67796][6c83a452]]  30.5331010000 p}  
-
-
- Un compresor instancia ideas para el control del rango dinámico. 
- El audio tiene diferencias de volumen deseadas y no deseadas. 
- Gran parte del carácter de la música o voz está contenido por debajo de los ataques o picos _1 
- Existen herramientas para controlar e indicar el volumen. 
- Hay dispositivos que varían su ganancia dependiendo del nivel de la señal de entrada. Para ello, el compresor, primero debe tener algún método para determinar el nivel de la señal, y luego debe ser capaz de utilizarlo para controlar la ganancia._2 
- Puede alterar las variaciones indeseables del nivel de la señal que, de otro modo, dificultarían a un instrumento mantener su balance al ensamblarse con otros instrumentos. _3
- La compresión ayuda a regular las proporciones cuando el audio de fondo se convierte en distractor. 
- La posición del micrófono se debe intencionar según el medidor y no lo visual. 
- Existen operaciónes de procesamiento de la señal de audio en las cuales se reduce el volumen de los sonidos fuertes o amplifica los sonidos leves, reduciendo o comprimiendo el rango dinámico de una señal de audio _4 
- http://www.tube-tech.com/wp-content/uploads/2018/05/Manual-CL-1B-180515.pdf 
- 1) https://dbxpro.com/en/product_documents/160-161-owners-manualpdf--2 
- 2) https://media.uaudio.com/assetlibrary/l/a/la-2a_manual.pdf 
- 3) http://library.lol/main/1BAB1DDA8F0B25EBC2493A0A7A9F3A2E 
- 4) https://vintageking.com/blog/2017/09/compressors-guide/ __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1561][dd0ce352]]  30.5331020000 p}  
 
 Para conocer los parámetros del compresor seguimos la invitación de Stavrou, vamos uno por uno, Ataque, Liberación, Umbral, Relación. __{[[file:/home/ff/SyncDocs/capture.ldg::68320][c15f11ed]]  30.5331021000 p}  
 
@@ -300,10 +244,6 @@ END FIRE: tomado de http://fors.doctorproaudio.com/messages/23559.html  por maur
 
 MICRÓFONOS                     __{[[file:/home/ff/SyncDocs/capture.ldg::68410][62b45df1]]  90.7000000000 p}  
 
-Los micrófonos pasivos requieren más participación del preamplificador, desde la perspectiva del preamplificador algunos micrófonos condensadores, en su guerra por el volumen, pueden operarse como un corto circuito. S.Albini __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1242][0dbef787]]  90.7010000000 p}  
-
-Los micrófonos de cinta (ribbon)  usan un transductor de micrones,  la cinta puede ser larga o corta,  al ajustar las impedancias entre el mic y ___ se cambia la apertura (respuesta en el espetro). Algunos mencionados: Soyuz / Aea / Coles, los Ohma de 1.8 micrones sintonizados a 16hz __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1211][103b387f]]  90.7070000000 p}  
-
 Cuando se embarca en una prueba de sonido, si el ritmo de trabajo se ve obstaculizado por innumerables fallas técnicas, se va erosionar el espíritu creativo, y va a dejar exhaustos a sus músicos, nos preguntamos entonces ¿cómo se prueba sonido? ¿a dónde se mira? ¿cómo se pide que se interpreten los instrumentos? (¿forte?)  ¿cómo se habla? (mudos y sordos) señas de mezcla, señas de ruido. __{[[file:/home/ff/SyncDocs/capture.ldg::67416][5695ccb9]]  90.8000000000 p}  
 
 Anéctodas ****  **** VJ VGA **** 7 minutos para el cambio de un cable **** Eficiencia, mojes Zen, la repetición **** Prueba de sonido en washignton Black Cat Fonseca, falsa comodidad, ¿no son capaces de probar en un media hora? los guerreros.**** Bienvenidos al mundo de lo poco intuitivo.**** Una raya donde se divide la ficción __{[[file:/home/ff/SyncDocs/capture.ldg::67923][0589c875]]  90.8000000000 p}  
@@ -313,9 +253,6 @@ PRODUCCION                     __{[[file:/home/ff/SyncDocs/capture.ldg::68419][5
 ¿Cómo se visten en la música clásica? de negro, manga larga, desaparecer, stage mánager de La Fourcade en feria de flores. __{[[file:/home/ff/SyncDocs/capture.ldg::67960][2f2a815c]]  90.8002000000 p}  
 
 RIESGO                         __{[[file:/home/ff/SyncDocs/capture.ldg::67969][61beebbd]]  90.8010000000 p}  
-
-Una sonido en directo requiere interconetar muchos elementos, cada soldadura es suceptible a fallar, Ante la incertidumbre en sistemas complejos podemos clasificar los riesgos bajo los parametros Posibilidad y Gravedad, relacionandolos podemos visualizar una  matriz de riesgo que nos permite gestionar el riesgo, en una dimensión multiplicamos los valores, en dos dimensiones (plano cartesiano) posicionamos los valores y dividimos unos cuadrantes, tratamos de tercerizar los cuadrantes de mayor riesgo. 
-  Matriz de riesgos (iss)			Evasión de riesgos			Transferencia de riesgos			Reducción de riesgos			Retención de riesgos (se acepta y se presupuesta) __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1255][6b5e026d]]  90.8010000000 p}  
 
 MANEJO TIEMPO 
  Presupuestos de tiempo, presupuestar lo desconocido, la primera vez que lo hago, ruta crítica y los colchones. 
