@@ -1,329 +1,297 @@
-#+TITLE: . 
-#+OPTIONS:    H:3 num:nil toc:nil \n:t ::t |:t ^:t -:t f:t *:t tex:t d:(HIDE) tags:not-in-toc broken-links:t 
-#+author: son0p  
-#+EMAIL: fede2001@gmail.com  
-#+OPTIONS: email:t 
+#+TITLE: audio_directo
+#+OPTIONS:    H:3 num:nil toc:nil \n:t ::t |:t ^:t -:t f:t *:t tex:t d:(HIDE) tags:not-in-toc broken-links:t
+#+author: son0p
+#+EMAIL: fede2001@gmail.com
+#+OPTIONS: email:t
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="one.css"/>
 
-PENSUM 
-   00 Entorno  
-   10 Filosofía Mezcla como arte del engaño 
-   30 Técnicas 
-     .0 Entorno
-     .0010 Distribucion 
-     .001005 crossover 
-     .001010 PA 
-     .001011 subs
-     .001012 demorados 
-     .001020  monitoreo 
-     .531 fuentes 
-      .53105 coro 
-     .532 pre/consola 
-     .533 procesadores 
-     .53310 compresor 
-     .534 medidores 
-     .550 abrir/cerrar la mezcla 
-   40 Ustedes 
-   .4 la propia voz 
-   50 Herramientas .10 Diagrama/Score  
-   60 Detonantes 
-   70 Desconocido  
-   80 Entrenamiento/Prácticas 
-   90 Apéndices 
-   .00 rider 
-   .20 relaciones y roles 
-   .30 Ecuaciones  
-   .60 subs 
-   .70 mics
-   .80 produccion 
-   .90 bibliografía __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::3089][45fec3a3]]  0.1000000000 p}  
+"Bajo estrés no te elevas al nivel de tus expectativas, sino que caes al nivel de tu preparación real" A.Skif
+ __{[[file:/home/ff/SyncDocs/FLC_informacion.ldg::35][0b6cda5e]]  0.2000000000 p}
 
-La mezcla como engaño 
-   Ante la imposibilidad de reproducir la magnitud y resolución de la realidad, le queda al mezclador de audio solo un camino digno, que es construir un panorama sonoro ficticio, haciendose a herramientas de engaño, como filtros,  ambientes artificiales y balances postizos. 
-   Al abandonar la oscura búsqueda de imitar pobremente la realidad, se nos abren infinitas posibilidades para la ficción sonora. 
-   El creador de un momento así tiene en oferta dos estados primarios: Estabilidad y Riesgo, en el primer caso se afinan las armas y herramientas en función de un planteamiento estático que delega en los músicos cualquier responsabilidad de variedad, el segundo planteamiento permite llevar a extremos la ficción y le da, al mezclador creador, autoridad para exagerar cualquier ficción emotiva. 
-   Debemos bifurcar nuestra creación de manera que nos permita transitar entre dos escenarios, para la Estabilidad serán necesario todo artefacto que nos permita restringir posibilidades, entraran aquí la famila de compresores, ambientes prudentes, ecualizacion correctiva; para el Riesgo nos serviran los usos extravagantes de las anteriores herramientas, dándole un especial valor a los programadores subterraneos que algún día escribieron código que /daba forma/ a heramientas deformes que parecían sin utilidad, debemos rastrear a estos magos y tener muy claras las posibilidades. __{[[file:/home/ff/SyncDocs/capture.ldg::67235][75d9f830]]  10.0000000000 p}  
+Hay ciertos finales que permiten acompañar la desaparición artística con la desaparición técnica, es que, en algunos casos, los sistemas tienen un sonido de base, sea por la suma de los ruidos de piso de cada componente, o tierra, hum etc. Así acompañar el final con un fadeout en el master puede hacer desaparecer la huella del sistema. __{[[file:/home/ff/SyncDocs/capture.ldg::59662][320de67f]]  3.0000000000 p}
 
-En los conciertos los errores musicales son  amplificados. __{[[file:/home/ff/SyncDocs/capture.ldg::67786][f93b4445]]  10.0000000000 p}  
+Los micrófonos pasivos requieren más participación del preamplificador, desde la perspectiva del preamplificador algunos micrófonos condensadores, en su guerra por el volumen, pueden operarse como un corto circuito. S.Albini __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1243][0dbef787]]  3.3230000000 p}
+
+La cámara acústica de un micrófono tiene influencia en su sonido, ohma invita a  experimentar con diferentes obstaculos para lograr respuestas únicas __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1265][eb7fb984]]  3.3230000000 p}
+
+
+ Un compresor instancia ideas para el control del rango dinámico.
+ El audio tiene diferencias de volumen deseadas y no deseadas.
+ Gran parte del carácter de la música o voz está contenido por debajo de los ataques o picos _1
+ Existen herramientas para controlar e indicar el volumen.
+ Hay dispositivos que varían su ganancia dependiendo del nivel de la señal de entrada. Para ello, el compresor, primero debe tener algún método para determinar el nivel de la señal, y luego debe ser capaz de utilizarlo para controlar la ganancia._2
+ Puede alterar las variaciones indeseables del nivel de la señal que, de otro modo, dificultarían a un instrumento mantener su balance al ensamblarse con otros instrumentos. _3
+ La compresión ayuda a regular las proporciones cuando el audio de fondo se convierte en distractor.
+ La posición del micrófono se debe intencionar según el medidor y no lo visual.
+ Existen operaciónes de procesamiento de la señal de audio en las cuales se reduce el volumen de los sonidos fuertes o amplifica los sonidos leves, reduciendo o comprimiendo el rango dinámico de una señal de audio _4
+ http://www.tube-tech.com/wp-content/uploads/2018/05/Manual-CL-1B-180515.pdf
+ 1) https://dbxpro.com/en/product_documents/160-161-owners-manualpdf--2
+ 2) https://media.uaudio.com/assetlibrary/l/a/la-2a_manual.pdf
+ 3) http://library.lol/main/1BAB1DDA8F0B25EBC2493A0A7A9F3A2E
+ 4) https://vintageking.com/blog/2017/09/compressors-guide/
+ __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1560][dd0ce352]]  3.3641000000 p}
+
+La mezcla como engaño
+   Ante la imposibilidad de reproducir la magnitud y resolución de la realidad, le queda al mezclador de audio solo un camino digno, que es construir un panorama sonoro ficticio, haciendose a herramientas de engaño, como filtros,  ambientes artificiales y balances postizos.
+   Al abandonar la oscura búsqueda de imitar pobremente la realidad, se nos abren infinitas posibilidades para la ficción sonora.
+   El creador de un momento así tiene en oferta dos estados primarios: Estabilidad y Riesgo, en el primer caso se afinan las armas y herramientas en función de un planteamiento estático que delega en los músicos cualquier responsabilidad de variedad, el segundo planteamiento permite llevar a extremos la ficción y le da, al mezclador creador, autoridad para exagerar cualquier ficción emotiva.
+   Debemos bifurcar nuestra creación de manera que nos permita transitar entre dos escenarios, para la Estabilidad serán necesario todo artefacto que nos permita restringir posibilidades, entraran aquí la famila de compresores, ambientes prudentes, ecualizacion correctiva; para el Riesgo nos serviran los usos extravagantes de las anteriores herramientas, dándole un especial valor a los programadores subterraneos que algún día escribieron código que /daba forma/ a heramientas deformes que parecían sin utilidad, debemos rastrear a estos magos y tener muy claras las posibilidades. __{[[file:/home/ff/SyncDocs/capture.ldg::67169][75d9f830]]  10.0000000000 p}
+
+En los conciertos los errores musicales son amplificados. __{[[file:/home/ff/SyncDocs/capture.ldg::67720][f93b4445]]  10.0000000000 p}
 
 Considerar el acto en vivo, ese pequeño cosmos que incluye el audio en directo, como formato industrial.
-   Referente que no usa refuerzo de audio Tiny Desk (NPR Music) __{[[file:/home/ff/SyncDocs/capture.ldg::67933][7bf3c3fe]]  10.0000000000 p}  
+   Referente que no usa refuerzo de audio Tiny Desk (NPR Music) __{[[file:/home/ff/SyncDocs/capture.ldg::67867][7bf3c3fe]]  10.0000000000 p}
 
-Vamos de lo grueso a lo fino: 
-   Estabilidad: Ir de lo terrible a lo decente en el menor tiempo posible, aprender a recuperarse (panic) Nos ocupamos de que todo suene, y lograr un balance que se mantenga. 
-   Imitación: Con las herramientas buscamos acercarnos a un referente estético, 
-   Riesgo: Exageramos algunos procedimientos intentando expandir el gesto emotivo de la obra. 
-   Identidad: Tomamos decisiones radicales con respaldo técnico para amplificar lo que es único, tanto en el ensamble como en el operador de audio. __{[[file:/home/ff/SyncDocs/capture.ldg::67466][95a6aa9a]]  10.0100000000 p}  
+Progresando de lo grueso a lo fino:
+   Se inicia buscando una estabilidad donde se concentran las acciones en transformar terribles desajustes de mezcla en decentes usando el menor tiempo posible, aprender a recuperarse (panic). Pasada la urgencia se verifica que todo lo que debería sonar suene para lograr un balance que se mantenga.
+   Se busca luego acercarse a un referente estético.
+   Se toman riesgos exagerando algunos procedimientos, intentando expandir el gesto emotivo de la pieza.
+   Identidad: Tomamos decisiones radicales con respaldo técnico para amplificar lo que es único, tanto en el ensamble como en el operador de audio. __{[[file:/home/ff/SyncDocs/capture.ldg::67400][95a6aa9a]]  10.0100000000 p}
 
-Sabemos que es imposible replicar con exactitud la mezcla concebida en la mente del director del ensamble acústico. Sin embargo, con ciertas herramientas, podemos crear una propuesta de mezcla ficticia que amplifique y enriquezca la intención emotiva del director.. __{[[file:/home/ff/SyncDocs/capture.ldg::68257][e94aca72]]  10.0110000000 p}  
+Sabemos que es imposible replicar con exactitud la mezcla concebida en la mente del director del ensamble acústico. Sin embargo, con ciertas herramientas, podemos crear una propuesta de mezcla ficticia que amplifique y enriquezca la intención emotiva del director.. __{[[file:/home/ff/SyncDocs/capture.ldg::68191][e94aca72]]  10.0110000000 p}
 
-¿Es relevante el cargo de Operador de Audio Particular en Medellín? ¿En qué contextos resulta útil y en cuáles no? ¿A qué necesidad específica responde esta figura?. 
-   Para iniciar reflexionemos sobre el problema a partir de esta apreciación sobre el rol de un /Productor Musical/ 
- "I agree. Producers are basically like a temporary member of the band, and they are there to bring new arrangement, recording, and songwriting ideas to the table. Everyone isn't a producer." --Kgroover  
- Si asumimos que el operador de audio en directo puede ser considerado "otro miembro de la banda", ¿cómo impacta esto en la operación técnica y creativa durante un evento en vivo?  
- Además nos preguntamos, ¿hacemos seguimiento a lo que sucede despues? __{[[file:/home/ff/SyncDocs/capture.ldg::67244][9ad1a37d]]  10.0200000000 p}  
+¿Es relevante el cargo de Operador de Audio Particular en Medellín? ¿En qué contextos resulta útil y en cuáles no? ¿A qué necesidad específica responde esta figura?.
+   Para iniciar reflexionemos sobre el problema a partir de esta apreciación sobre el rol de un /Productor Musical/
+ "I agree. Producers are basically like a temporary member of the band, and they are there to bring new arrangement, recording, and songwriting ideas to the table. Everyone isn't a producer." --Kgroover
+ Si asumimos que el operador de audio en directo puede ser considerado "otro miembro de la banda", ¿cómo impacta esto en la operación técnica y creativa durante un evento en vivo?
+ Además nos preguntamos, ¿hacemos seguimiento a lo que sucede despues? __{[[file:/home/ff/SyncDocs/capture.ldg::67178][9ad1a37d]]  10.0200000000 p}
 
-¿Cuáles serían las cualidades del rol?  Tratemos de precisar algunos lugares comunes que responden a esta pregunta, /Visión general/ Aunque pareciera más el rol de manager, buena comunicación, guardián de una visión, administración de talento, tiempo. Adaptarse, modelos de cooperación. ¿Debe saber de música? (¿armonía?, ¿contrapunto?, ¿ritmo?, ¿forma? __{[[file:/home/ff/SyncDocs/capture.ldg::67282][31a3fd7f]]  10.1000000000 p}  
+¿Cuáles serían las cualidades del rol?  Tratemos de precisar algunos lugares comunes que responden a esta pregunta, /Visión general/ Aunque pareciera más el rol de manager, buena comunicación, guardián de una visión, administración de talento, tiempo. Adaptarse, modelos de cooperación. ¿Debe saber de música? (¿armonía?, ¿contrapunto?, ¿ritmo?, ¿forma? __{[[file:/home/ff/SyncDocs/capture.ldg::67216][31a3fd7f]]  10.1000000000 p}
 
-¿El rol del /Operador de Audio Particular/ es una ciencia, un arte o una técnica?.  No podemos responder con precisión, preferimos catalogarla como una labor llena de posibilidades orientada a amplificar de manera eficiente y contundentemente amplificar el gesto del artístico del intérprete. __{[[file:/home/ff/SyncDocs/capture.ldg::67300][a3ac72ca]]  10.1000000000 p}  
+¿El rol de la persona /Operadora de Audio Particular/ es una ciencia, un arte o una técnica?.  No podemos responder con precisión, preferimos catalogarla como una labor llena de posibilidades orientada a amplificar de manera eficiente y contundente el gesto artístico del intérprete. __{[[file:/home/ff/SyncDocs/capture.ldg::67234][a3ac72ca]]  10.1000000000 p}
 
-En el rol de guardian del lenguaje diferencia entre audio y sonido, detallando que sonido incluye las frecuencias inaudibles y el audio acota al sonido en las frecuencias audibles, entonces, para efectos de este folleto, se hace referencia a  operador de /audio/, refuerzo de /audio/, ¿Qué tiene que ver con mezcla? __{[[file:/home/ff/SyncDocs/capture.ldg::68104][c472725a]]  10.1100000000 p}  
+En el rol de guardian del lenguaje diferencia entre audio y sonido, detallando que sonido incluye las frecuencias inaudibles y el audio acota al sonido en las frecuencias audibles, entonces, para efectos de este folleto, se hace referencia a  operador de /audio/, refuerzo de /audio/, ¿Qué tiene que ver con mezcla? __{[[file:/home/ff/SyncDocs/capture.ldg::68038][c472725a]]  10.1100000000 p}
 
-Nos educamos en bares con condiciones acústicas retadoras y equipos limitados. Se requieren destrezas diferentes entre conducir un carro de rodillos y una tractomula. ¿qué cambia? __{[[file:/home/ff/SyncDocs/capture.ldg::67396][640fe9f7]]  30.0000000000 p}  
+Nos educamos en bares con condiciones acústicas retadoras y equipos limitados. Se requieren destrezas diferentes entre conducir un carro de rodillos y una tractomula. ¿qué cambia? __{[[file:/home/ff/SyncDocs/capture.ldg::67330][640fe9f7]]  30.0000000000 p}
 
-= TÉCNICAS                     __{[[file:/home/ff/SyncDocs/capture.ldg::68347][ebae1da5]]  30.0000000000 p}  
+= TÉCNICAS                     __{[[file:/home/ff/SyncDocs/capture.ldg::68281][ebae1da5]]  30.0000000000 p}
 
-K.I.S.S. "mantenlo simple, estúpido"  ¿cómo enfrentar cambios de última hora? __{[[file:/home/ff/SyncDocs/capture.ldg::67406][7357de03]]  30.0001000000 p}  
+K.I.S.S. "mantenlo simple, estúpido"  ¿cómo enfrentar cambios de última hora? __{[[file:/home/ff/SyncDocs/capture.ldg::67340][7357de03]]  30.0001000000 p}
 
-DISTRIBUCIÓN                   __{[[file:/home/ff/SyncDocs/capture.ldg::68509][4f3cad16]]  30.0010000000 p}  
+DISTRIBUCIÓN                   __{[[file:/home/ff/SyncDocs/capture.ldg::68443][4f3cad16]]  30.0010000000 p}
 
-Dispersión en sistemas convencionales, el arreglos en línea, arreglos de bajos. __{[[file:/home/ff/SyncDocs/capture.ldg::67446][7d6b93ea]]  30.0010001000 p}  
+En un recinto cerrado la respuesta acústica se vuelve protagonista, cuando se pierde inteligibilidad podemos usar zonas. Repartir equipo de amplificación por el recinto requiere negociación por costos y seguridad. ¿Cómo los diseñamos? ¿Qué diferencias podemos considerar respecto los demorados en espacio abierto? Corferias, Zonas, demorados, inteligibilidad, la macarena __{[[file:/home/ff/SyncDocs/capture.ldg::68020][456d5290]]  30.0010001000 p}
 
-En un recinto cerrado la respuesta acústica se vuelve protagonista, cuando se pierde inteligibilidad podemos usar zonas. Repartir equipo de amplificación por el recinto requiere negociación por costos y seguridad. ¿Cómo los diseñamos? ¿Qué diferencias podemos considerar respecto los demorados en espacio abierto? Corferias, Zonas, demorados, inteligibilidad, la macarena __{[[file:/home/ff/SyncDocs/capture.ldg::68086][456d5290]]  30.0010001000 p}  
+Cuando sea posible consideremos Dual Mono y Centro pues la manera como se distribuyen los oyentes del audio en vivo los hace muy vulnerables al filtro de peine. __{[[file:/home/ff/SyncDocs/capture.ldg::68119][bcd0eea3]]  30.00100101}
 
-Cuando sea posible consideremos Dual Mono y Centro pues la manera como se distribuyen los oyentes del audio en vivo los hace muy vulnerables al filtro de peine. __{[[file:/home/ff/SyncDocs/capture.ldg::68185][bcd0eea3]]  30.00100101}  
+CROSSOVER                      __{[[file:/home/ff/SyncDocs/capture.ldg::68389][f08c2119]]  30.0010050000 p}
 
-CROSSOVER                      __{[[file:/home/ff/SyncDocs/capture.ldg::68455][f08c2119]]  30.0010050000 p}  
+Verificar el crossover pues en ocasiónes el preparador del sistema de audio deja los bajos sobresalientes, hay que cuidar la distribución de víás especialmente para envíos a retransmisiones, streamming, te etc. __{[[file:/home/ff/SyncDocs/capture.ldg::68110][4449d4d4]]  30.0010052000 p}
 
-Crossover acotar el rango adecuado para cada componente especializado. __{[[file:/home/ff/SyncDocs/capture.ldg::67766][294abab0]]  30.0010051000 p}  
+=- PA
+ Para reforzar el fenónmeno de una fuente a un receptor, distancia corta entre la boca y el oído, si escalamos esa condicion llegamos al refuerzo de audio.
+ __{[[file:/home/ff/SyncDocs/capture.ldg::68002][ed605d71]]  30.0010100000 p}
 
-Verificar el crossover pues en ocasiónes el preparador del sistema de audio deja los bajos sobresalientes, hay que cuidar la distribución de víás especialmente para envíos a retransmisiones, streamming, te etc. __{[[file:/home/ff/SyncDocs/capture.ldg::68176][4449d4d4]]  30.0010052000 p}  
+RETRANSMISIÓN                  __{[[file:/home/ff/SyncDocs/capture.ldg::68398][71b6053d]]  30.0010101000 p}
 
-=- PA 
- Para reforzar el fenónmeno de una fuente a un receptor, distancia corta entre la boca y el oído, si escalamos esa condicion llegamos al refuerzo de audio. 
- __{[[file:/home/ff/SyncDocs/capture.ldg::68068][ed605d71]]  30.0010100000 p}  
+¿Retransmisión? Para determinar la relación de importancias entre la mezcla de Casa (FOH) o la de transmisión (TV/Radio) se a considerado la relación entre la cantidad de personas en cada caso y la posibilidad de reproducciones de la mezcla, así, en los casos donde hay mayor audiencia en la retransmisión se toman desiciones para optimizar esas salidas, ej: cuidar el balance de bajos, disminuír el rango dinámico, verificar la compatibilidad con Mono.
+ __{[[file:/home/ff/SyncDocs/capture.ldg::67360][f493bb9e]]  30.0010101010 p}
 
-RETRANSMISIÓN                  __{[[file:/home/ff/SyncDocs/capture.ldg::68464][71b6053d]]  30.0010101000 p}  
+SUBS                           __{[[file:/home/ff/SyncDocs/capture.ldg::68461][75556100]]  30.0010110000 p}
 
-¿Retransmisión? Para determinar la relación de importancias entre la mezcla de Casa (FOH) o la de transmisión (TV/Radio) se a considerado la relación entre la cantidad de personas en cada caso y la posibilidad de reproducciones de la mezcla, así, en los casos donde hay mayor audiencia en la retransmisión se toman desiciones para optimizar esas salidas, ej: cuidar el balance de bajos, disminuír el rango dinámico, verificar la compatibilidad con Mono. 
- __{[[file:/home/ff/SyncDocs/capture.ldg::67426][f493bb9e]]  30.0010101010 p}  
+Un evento masivo es acompañado, usualmente, de un equipo de sonido de gran capacidad, los sub-bajos presentan un reto especial para el romance entre el operador de audio y el instrumentista, por esta fantástica aventura iniciaremos.
+   Con la llegada de los bajos de seis cuerdas, llegaron también retos profundos para inteligibilidad  al sur  del espectro, pelean bombo y bajo por su espacio.
+   Edgardo Gutierrez, bajista de Fonseca, ha sido mi cómplice, nos pusimos una meta a 3 años, no usar compresor ni ecualizador, lo primero fue observar su mano, anatómicamente tocaba las cuerdas gordas cerca al diapasón y las delgadas cerca al puente, en la búsqueda de claridad en las notas más bajas intentamos girar su mano para hacer lo contrario, mas cerca al puente las notas graves y mas cerca al diapasón las agudas, luego cambio los micrófonos de su bajo, luego experimentó con otro bajo, el progreso ha sido notorio y ya gozamos del color deseado.
+   Nuestro reto actual es la dinámica, este asunto tiene mucho que ver con el monitoreo del instrumentista, y tiene mucha mas influencia si en con audífonos, permitanme explicarles, si el instrumentista construye (con la complicidad del operador de monitores) una mezcla recostada a su propio instrumento, lo cual es usual, se presenta una referencia falsa de la dinámica, es así como el instrumentista puede tocar muy suavemente en determinados pasajes, y sigue escuchando claramente su instrumento, sin embargo en el sonido de sala, como su instrumento esta inmerso de manera más pareja con sus colegas, o desaparece de la mezcla o se hace necesario activar un esquema de compresión. __{[[file:/home/ff/SyncDocs/capture.ldg::68128][12ee0e84]]  30.0010110100 p}
 
-SUBS                           __{[[file:/home/ff/SyncDocs/capture.ldg::68527][75556100]]  30.0010110000 p}  
+TIEMPOS/FASE
+ Respuesta de fase, mide la desviación del tiempo sobre la frecuencia, si algo sale demorado puede llegar a cancelarse __{[[file:/home/ff/SyncDocs/capture.ldg::68245][ca1ff205]]  30.0010120000 p}
 
-Un evento masivo es acompañado, usualmente, de un equipo de sonido de gran capacidad, los sub-bajos presentan un reto especial para el romance entre el operador de audio y el instrumentista, por esta fantástica aventura iniciaremos. 
-   Con la llegada de los bajos de seis cuerdas, llegaron también retos profundos para inteligibilidad  al sur  del espectro, pelean bombo y bajo por su espacio. 
-   Edgardo Gutierrez, bajista de Fonseca, ha sido mi cómplice, nos pusimos una meta a 3 años, no usar compresor ni ecualizador, lo primero fue observar su mano, anatómicamente tocaba las cuerdas gordas cerca al diapasón y las delgadas cerca al puente, en la búsqueda de claridad en las notas más bajas intentamos girar su mano para hacer lo contrario, mas cerca al puente las notas graves y mas cerca al diapasón las agudas, luego cambio los micrófonos de su bajo, luego experimentó con otro bajo, el progreso ha sido notorio y ya gozamos del color deseado. 
-   Nuestro reto actual es la dinámica, este asunto tiene mucho que ver con el monitoreo del instrumentista, y tiene mucha mas influencia si en con audífonos, permitanme explicarles, si el instrumentista construye (con la complicidad del operador de monitores) una mezcla recostada a su propio instrumento, lo cual es usual, se presenta una referencia falsa de la dinámica, es así como el instrumentista puede tocar muy suavemente en determinados pasajes, y sigue escuchando claramente su instrumento, sin embargo en el sonido de sala, como su instrumento esta inmerso de manera más pareja con sus colegas, o desaparece de la mezcla o se hace necesario activar un esquema de compresión. __{[[file:/home/ff/SyncDocs/capture.ldg::68194][12ee0e84]]  30.0010110100 p}  
+Los Demorados, ¿cómo hacer que el sonido llegue a tiempo? http://www.audiosonica.com/en/course/post/166/Live_sound-Delay_towers http://www.sengpielaudio.com/calculator-timedelayphase.htm http://www.sengpielaudio.com/Calculations03.htm __{[[file:/home/ff/SyncDocs/capture.ldg::67691][169a84f5]]  30.0010200000 p}
 
-TIEMPOS/FASE 
- Respuesta de fase, mide la desviación del tiempo sobre la frecuencia, si algo sale demorado puede llegar a cancelarse __{[[file:/home/ff/SyncDocs/capture.ldg::68311][ca1ff205]]  30.0010120000 p}  
+MONITOREO                      __{[[file:/home/ff/SyncDocs/capture.ldg::68407][a6c2412a]]  30.0010200000 p}
 
-Los Demorados, ¿cómo hacer que el sonido llegue a tiempo? http://www.audiosonica.com/en/course/post/166/Live_sound-Delay_towers http://www.sengpielaudio.com/calculator-timedelayphase.htm http://www.sengpielaudio.com/Calculations03.htm __{[[file:/home/ff/SyncDocs/capture.ldg::67757][169a84f5]]  30.0010200000 p}  
+¿Feedback? ¿Acóple? En efecto, hay muchas maneras de definir tal fenómeno, pero debemos detenernos en las que nos sirvan para este encuentro, de poco nos sirve entender el fenómeno eléctrico en un sistema cerrado, nos interesa más bien la relación entre la fuente, lo amplificado y lo reflejado, más aún qusiera prestar especial atención a la frontera donde se confunde la fuente y su reflejo, es allí donde se puede anticipar la formación del fenómeno.
+   Consideremos entonces que el feedback sucede cuando los reflejos de la fuente amplificada superan la fuente acústica. __{[[file:/home/ff/SyncDocs/capture.ldg::67271][a821f3a2]]  30.0010200100 p}
 
-MONITOREO                      __{[[file:/home/ff/SyncDocs/capture.ldg::68473][a6c2412a]]  30.0010200000 p}  
+Ringing ¿timbrar? los monitores? llevarlos al borde de la realimentación para detectar las frecuencias más propensas a acoplarse. __{[[file:/home/ff/SyncDocs/capture.ldg::67948][a14ae999]]  30.0010200200 p}
 
-¿Feedback? ¿Acóple? En efecto, hay muchas maneras de definir tal fenómeno, pero debemos detenernos en las que nos sirvan para este encuentro, de poco nos sirve entender el fenómeno eléctrico en un sistema cerrado, nos interesa más bien la relación entre la fuente, lo amplificado y lo reflejado, más aún qusiera prestar especial atención a la frontera donde se confunde la fuente y su reflejo, es allí donde se puede anticipar la formación del fenómeno. 
-   Consideremos entonces que el feedback sucede cuando los reflejos de la fuente amplificada superan la fuente acústica. __{[[file:/home/ff/SyncDocs/capture.ldg::67337][a821f3a2]]  30.0010200100 p}  
+La mezcla que escucha cada instrumentista requiere administrar el balance, la mezcla personalizada trae un riesgo, si el instrumentista personaliza si mezcla con demasiada predominancia de su instrumento puede ejecutarlo con una dinámica amplia en la que los pasajes de baja dinámica pueden quedar ocultos al ¿incluirlos? en la mezcla general. __{[[file:/home/ff/SyncDocs/capture.ldg::67563][2551d977]]  30.0010200300 p}
 
-Ringing ¿timbrar? los monitores? llevarlos al borde de la realimentación para detectar las frecuencias más propensas a acoplarse. __{[[file:/home/ff/SyncDocs/capture.ldg::68014][a14ae999]]  30.0010200200 p}  
+Es necesario negociar con el instrumentista y el Operador de monitores para meter en contexto el instrumento en la propia mezcla del instrumentista, de esa forma él mismo sera testigo de sus desapariciones y automáticamente controlará de manera más estable su rango diámico. __{[[file:/home/ff/SyncDocs/capture.ldg::67740][a951e9b5]]  30.0010200400 p}
 
-La mezcla que escucha cada instrumentista requiere administrar el balance, la mezcla personalizada trae un riesgo, si el instrumentista personaliza si mezcla con demasiada predominancia de su instrumento puede ejecutarlo con una dinámica amplia en la que los pasajes de baja dinámica pueden quedar ocultos al ¿incluirlos? en la mezcla general. __{[[file:/home/ff/SyncDocs/capture.ldg::67629][2551d977]]  30.0010200300 p}  
+FUENTES                        __{[[file:/home/ff/SyncDocs/capture.ldg::68452][14efaa95]]  30.5310000000 p}
 
-Es necesario negociar con el instrumentista y el Operador de monitores para meter en contexto el instrumento en la propia mezcla del instrumentista, de esa forma él mismo sera testigo de sus desapariciones y automáticamente controlará de manera más estable su rango diámico. __{[[file:/home/ff/SyncDocs/capture.ldg::67806][a951e9b5]]  30.0010200400 p}  
+De Steve Albini debemos considerar los micrófonos de cinta, la idea de batería como un solo instrumento, el uso de micrófonos distantes. __{[[file:/home/ff/SyncDocs/FLC_informacion.ldg::393][2383ad53]]  30.5310100000 p}
 
-FUENTES                        __{[[file:/home/ff/SyncDocs/capture.ldg::68518][14efaa95]]  30.5310000000 p}  
+Decía un ingeniero de Frank Zappa que el aire es la mejor consola de mezcla, al capturar una fuente acústica ya estaríamos mezclando parámetros y hay factores que inciden, la posición del micrófono, el patrón polar, la reamplificación acústica.
+   Cada que duplique la distancia de la fuente pierde la mitad de la presión sonora.
+     Entonces para amplificar va a ser necesario tener los micrófonos más cerca de los instrumentos, caso contrario a la grabación o transmisión de TV sin amplificación, donde pueden posicionarse los micrófonos a más distancia. __{[[file:/home/ff/SyncDocs/capture.ldg::67300][15050d36]]  30.5310100000 p}
 
-Mezclando desde la fuente ¿Capturar una fuente acústica? ¿Cómo se decide la posición del micrófono? ¿qué tanto influye? ¿cuando de contacto? ¿patrón polar? ¿distancia? Cada que duplique la distancia de la fuente pierde la mitad de la presión sonora. 
-     Entonces para amplificar va a ser necesario tener los micrófonos más cerca de los instrumentos, caso contrario a la grabación o transmisión de TV sin amplificación, donde pueden posicionarse los micrófonos a más distancia. __{[[file:/home/ff/SyncDocs/capture.ldg::67366][15050d36]]  30.5310100000 p}  
+"The general rule of thumb is, the better the drummer, the less mics the recordist needs" mixerman __{[[file:/home/ff/SyncDocs/capture.ldg::68272][bb58dfd1]]  30.5310110000 p}
 
-"The general rule of thumb is, the better the drummer, the less mics the recordist needs" mixerman __{[[file:/home/ff/SyncDocs/capture.ldg::68338][bb58dfd1]]  30.5310110000 p}  
+Instrumentación Rock con instrumentos acústicos, ¿localización? ¿Barreras acústicas? ¿monitoreo? ángulos linearray __{[[file:/home/ff/SyncDocs/capture.ldg::67310][b3a6bc4d]]  30.5310200000 p}
 
-Instrumentación Rock con instrumentos acústicos, ¿localización? ¿Barreras acústicas? ¿monitoreo? ángulos linearray __{[[file:/home/ff/SyncDocs/capture.ldg::67376][b3a6bc4d]]  30.5310200000 p}  
+Liberar los filtros del los micrófonos aéreos trae mucha información ambiental y una influencia dramática en el sonido del redoblante.
+   El aro es fácil de ignorar, pero mi entrenamiento con los grupos de reggae me impiden dejarlo en su libre albedrío, entrenamiento y piezas requiere el baterísta para encontrar la relación adecuada entre aro y parche, buscar la posción de la baqueta, fortalecer el golpe a veces no basta y se debe buscar ayuda cambiando el aro superior por una pieza más generosa en volumen al ser castigado a golpes.
+   Ayuda un micrófono condensador más abierto que el típico SM57  funcionando como buen arbitro entre el golpe del parche y el aro. __{[[file:/home/ff/SyncDocs/capture.ldg::67770][950b0622]]  30.5310200000 p}
 
-Liberar los filtros del los micrófonos aéreos trae mucha información ambiental y una influencia dramática en el sonido del redoblante. 
-   El aro es fácil de ignorar, pero mi entrenamiento con los grupos de reggae me impiden dejarlo en su libre albedrío, entrenamiento y piezas requiere el baterísta para encontrar la relación adecuada entre aro y parche, buscar la posción de la baqueta, fortalecer el golpe a veces no basta y se debe buscar ayuda cambiando el aro superior por una pieza más generosa en volumen al ser castigado a golpes. 
-   Ayuda un micrófono condensador más abierto que el típico SM57  funcionando como buen arbitro entre el golpe del parche y el aro. __{[[file:/home/ff/SyncDocs/capture.ldg::67836][950b0622]]  30.5310200000 p}  
+El operador de audio supone que una posición de micrófono o micrófono funciona y ese deseo puede ser tan fuerte que le impide escuchar que no funciona. En la plazoleta del edificio inteligente probaba sonido herencia de Tinmbiquí, llegamos a la marimba, el ruteador había seleccionado los mejores condensadores como de costumbre con la marimba sinfónica, fué el consejero de sonido de parte del grupo que preguntó ¿qué micrófonos tiene? ¿suena raro tienes dos 57? se trata de selva. En otra ocasión solo piano para Teresita Gómez salio a sala a escuchar y me preguntaba, ¿porqué suena tan brillante? refriendose a un exceso en altas frecuencias. __{[[file:/home/ff/SyncDocs/capture.ldg::68155][5b3eef97]]  30.5310200000 p}
 
-El operador de audio supone que una posición de micrófono o micrófono funciona y ese deseo puede ser tan fuerte que le impide escuchar que no funciona. En la plazoleta del edificio inteligente probaba sonido herencia de Tinmbiquí, llegamos a la marimba, el ruteador había seleccionado los mejores condensadores como de costumbre con la marimba sinfónica, fué el consejero de sonido de parte del grupo que preguntó ¿qué micrófonos tiene? ¿suena raro tienes dos 57? se trata de selva. En otra ocasión solo piano para Teresita Gómez salio a sala a escuchar y me preguntaba, ¿porqué suena tan brillante? refriendose a un exceso en altas frecuencias. __{[[file:/home/ff/SyncDocs/capture.ldg::68221][5b3eef97]]  30.5310200000 p}  
+Pasé un largo período luchando con cada una de las piezas de la batería, como fila ordenada fuí aprendiendo a relacionarme con el bombo primero, los toms, redoblante (con quien aún estoy construyendo nuestra relación) y por último los volubles micrófonos aéreos, fueron éstos últimos los que me brindaron, de la mano de Kiko Castro, la liberadora necesidad de tratar la batería como un solo instrumento. __{[[file:/home/ff/SyncDocs/capture.ldg::67760][59a2aa01]]  30.5310400000 p}
 
-Pasé un largo período luchando con cada una de las piezas de la batería, como fila ordenada fuí aprendiendo a relacionarme con el bombo primero, los toms, redoblante (con quien aún estoy construyendo nuestra relación) y por último los volubles micrófonos aéreos, fueron éstos últimos los que me brindaron, de la mano de Kiko Castro, la liberadora necesidad de tratar la batería como un solo instrumento. __{[[file:/home/ff/SyncDocs/capture.ldg::67826][59a2aa01]]  30.5310400000 p}  
+La cámara acústica de un micrófono tiene influencia en su sonido, ohma invita a  experimentar con diferentes obstaculos para lograr respuestas únicas __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1266][eb7fb984]]  30.5310400000 p}
 
-La cámara acústica de un micrófono tiene influencia en su sonido, ohma invita a  experimentar con diferentes obstaculos para lograr respuestas únicas __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1266][eb7fb984]]  30.5310400000 p}  
+Sobre algunos instrumentos acústicos,
+ Coros, si la cantidad de micrófonos es limitada se puede ubicar los micrófonos puntuales en las mejores voces, esto puede generar frustración en los cantantes que no tengan micrófono al frente, para disminuír el impacto de este fenómeno psicológico podemos poner una voz selecionada al centro y mirando al frente del microfono y dos voces no seleccionadas a cada lado, de esta manera tendrémos más presencia de la voz seleccionada y menos de las voces no seleccionadas.
+  Cuerdas.
+ Metales
+ Maderas
+ Percusiones __{[[file:/home/ff/SyncDocs/capture.ldg::67390][f312fe8d]]  30.5310500000 p}
 
-Sobre algunos instrumentos acústicos, 
- Coros, si la cantidad de micrófonos es limitada se puede ubicar los micrófonos puntuales en las mejores voces, esto puede generar frustración en los cantantes que no tengan micrófono al frente, para disminuír el impacto de este fenómeno psicológico podemos poner una voz selecionada al centro y mirando al frente del microfono y dos voces no seleccionadas a cada lado, de esta manera tendrémos más presencia de la voz seleccionada y menos de las voces no seleccionadas. 
-  Cuerdas. 
- Metales  
- Maderas  
- Percusiones __{[[file:/home/ff/SyncDocs/capture.ldg::67456][f312fe8d]]  30.5310500000 p}  
+VOZ - Desde que el cantante emprendio su búsqueda de expresión corporal y sacó el micrófono de su estático pedestal, inició la persecución del operador de audio para estabilizar la fuente vocal, en el mejor de los casos el talento vocal ajusta la distancia del micrófono en proporción inversa al volumen en que canta, pero el color de la voz cambia con la angulación del micrófono y en la proximidad a la boca se amentan las frecuencias bajas.
+   El diseño del micrófono direcciónal requiere aire en la parte trasera de la capsula, los 80's junto a MTV difundieron un incentivo estético de agarrar el micrófono tapando media "cabeza", posiblemente desde los maestros de ceremonia que aumentaban el nivel de su voz con esa práctica. __{[[file:/home/ff/SyncDocs/capture.ldg::67789][585441a1]]  30.5310600000 p}
 
-VOZ - Desde que el cantante emprendio su búsqueda de expresión corporal y sacó el micrófono de su estático pedestal, inició la persecución del operador de audio para estabilizar la fuente vocal, en el mejor de los casos el talento vocal ajusta la distancia del micrófono en proporción inversa al volumen en que canta, pero el color de la voz cambia con la angulación del micrófono y en la proximidad a la boca se amentan las frecuencias bajas. 
-   El diseño del micrófono direcciónal requiere aire en la parte trasera de la capsula, los 80's junto a MTV difundieron un incentivo estético de agarrar el micrófono tapando media "cabeza", posiblemente desde los maestros de ceremonia que aumentaban el nivel de su voz con esa práctica. __{[[file:/home/ff/SyncDocs/capture.ldg::67855][585441a1]]  30.5310600000 p}  
+Con un impacto menos dramático está el posicionamiento de los micrófonos, iniciemos por la voz que se ve afectada por la distancia y ángulo, se pretende entonces entender la manera como afecta su instrumento y usar eso a su favor. __{[[file:/home/ff/SyncDocs/capture.ldg::67798][b261b095]]  30.5310610000 p}
 
-Con un impacto menos dramático está el posicionamiento de los micrófonos, iniciemos por la voz que se ve afectada por la distancia y ángulo, se pretende entonces entender la manera como afecta su instrumento y usar eso a su favor. __{[[file:/home/ff/SyncDocs/capture.ldg::67864][b261b095]]  30.5310610000 p}  
+=- AMARRARSE LAS BOTAS
+ Cada consola digital propone una configuración por defecto de los canales; como es más eficiente quitarle el filtro pasa altos a 2 canales que ponerselo a 46, la persona configura un canal y lo copia en todos, luego ajusta las excepciones, aqui se describe ese canal:
+   HPF 100hz
+   Comp On, (Ratio 2:1, Threshold -12dBFS, Attack fast, Release 200ms')
+   Envios a Reverberación -12dBFS
+   Envíos a Monitoreo  -12dBFS
+   Asignacción DCA 7
+ __{[[file:/home/ff/SyncDocs/capture.ldg::59654][f704741e]]  30.5320000000 p}
 
-=- AMARRARSE LAS BOTAS 
- Cada consola propone una configuración por defecto de los canales, como es más eficiente quitarle el filtro pasa altos a 2 canales que ponerselo a 46, el hombre hace un canal y lo copia en todos, luego ajusta las excepciones, aqui se describe ese canal. 
-   HPF 100 hz 
-   Comp On, (Ratio 2:1, Threshold -12dBFS, Attack fast, release fast') 
-   Envios a Reverberación -12dBFS  
-   Envíos a Monitoreo  -12dBFS   
-   Asignacción DCA 7 
- __{[[file:/home/ff/SyncDocs/capture.ldg::59729][f704741e]]  30.5320000000 p}  
+¿Quieto? ¿Cabalgando? En cuáles casos se dejan los /faders/ quietos? ¿jazz? ¿dinámica? ¿tradicional? ¿pop? ¿rock? ¿métal? ¿reggae?.
+ __{[[file:/home/ff/SyncDocs/capture.ldg::67499][26efe998]]  30.5320000000 p}
 
-¿Quieto? ¿Cabalgando? En cuáles casos se dejan los /faders/ quietos? ¿jazz? ¿dinámica? ¿tradicional? ¿pop? ¿rock? ¿métal? ¿reggae?.  
- __{[[file:/home/ff/SyncDocs/capture.ldg::67565][26efe998]]  30.5320000000 p}  
+Presición. Para controlar la dinámica de las fuentes sonoras ajustamos la estructura de ganancia y para los movimientos más precisos usamos los /faders/ que tienen diseño logarítmico. (genial!) __{[[file:/home/ff/SyncDocs/capture.ldg::67509][5817c2ed]]  30.5321000000 p}
 
-¿Mezcla con la estructura de ganancia? Estructura de ganancia. Hugo Villegas, Rango dinámico (del piso de ruido al clip (recorte)) headroom (de nominal a clip (recorte) ) diferencia entre clipping / recorte  distorsión, distorsión es cuando la señal original es alterada, si la alteración agrega armónicos llamamos distorsión armónica (%THD), si agrega otras frequencias por no linealidad distorsión intermodulada (%IMD), si cambia la respuesta de frecuencia Distorsión de frecuencia.  
-   Clipping/Recorte cuando la amplitud intenta superar el umbral máximo, los picos son recortados __{[[file:/home/ff/SyncDocs/capture.ldg::67536][6e5dfa7b]]  30.5321000000 p}  
+Se preguntará usted, ¿Porqué disminuír el rango dinámico? ¿Es acaso sombrio tener una ejecución vívida.. llena de dinámica?  Para saltar un conejo requiere de una fuerza equilibrada en sus dos patas, es así como la variación dinámica egoísta puede deformar la mezcla, pero un expresivo relieve dinámico de común acuerdo entre los músicos participante puede ser exquisitamente apreciado. Es un caso especial algúnos género que se han popularizado con un mínimo rango dinámico, el Pop, Power Rock, podrían ser antagonistas dinámicos del jazz o música sinfónica,en el primer caso, es natural escuchar estos generos en medio de ruidosas ciudades, es así como los productores se han encargado de mantener muy arriba todos los sonidos, para que el ciclista, conductor o caminante no se pierda ningún detalle de la mezcla en sus audífonos económicos, sin detenerse a cuestionar estos comportamientos, la labor del operador de audio en vivo es reproducir y expandir el gesto del artista, así que si de Pop, o Power Rock se trata se hace fundamental restringir el rango dinámico a las buenas o a las malas y lograr recrear la visión idealizada que plasmó el artista en sus grabaciones de estudio. __{[[file:/home/ff/SyncDocs/capture.ldg::67750][22a7f6b1]]  30.5331000000 p}
 
-Presición. Para controlar la dinámica de las fuentes sonoras ajustamos la estructura de ganancia y para los movimientos más precisos usamos los /faders/ que tienen diseño logarítmico. (genial!) __{[[file:/home/ff/SyncDocs/capture.ldg::67575][5817c2ed]]  30.5321000000 p}  
+== COMPRESOR                   __{[[file:/home/ff/SyncDocs/capture.ldg::68290][8ed886a0]]  30.5331000000 p}
 
-Se preguntará usted, ¿Porqué disminuír el rango dinámico? ¿Es acaso sombrio tener una ejecución vívida.. llena de dinámica?  Para saltar un conejo requiere de una fuerza equilibrada en sus dos patas, es así como la variación dinámica egoísta puede deformar la mezcla, pero un expresivo relieve dinámico de común acuerdo entre los músicos participante puede ser exquisitamente apreciado. Es un caso especial algúnos género que se han popularizado con un mínimo rango dinámico, el Pop, Power Rock, podrían ser antagonistas dinámicos del jazz o música sinfónica,en el primer caso, es natural escuchar estos generos en medio de ruidosas ciudades, es así como los productores se han encargado de mantener muy arriba todos los sonidos, para que el ciclista, conductor o caminante no se pierda ningún detalle de la mezcla en sus audífonos económicos, sin detenerse a cuestionar estos comportamientos, la labor del operador de audio en vivo es reproducir y expandir el gesto del artista, así que si de Pop, o Power Rock se trata se hace fundamental restringir el rango dinámico a las buenas o a las malas y lograr recrear la visión idealizada que plasmó el artista en sus grabaciones de estudio. __{[[file:/home/ff/SyncDocs/capture.ldg::67816][22a7f6b1]]  30.5331000000 p}  
-
-== COMPRESOR                   __{[[file:/home/ff/SyncDocs/capture.ldg::68356][8ed886a0]]  30.5331000000 p}  
-
-"Compresor is for Kids" dice Bruce Sweeden. __{[[file:/home/ff/SyncDocs/capture.ldg::67796][6c83a452]]  30.5331010000 p}  
+"Compresor is for Kids" dice Bruce Sweeden. __{[[file:/home/ff/SyncDocs/capture.ldg::67730][6c83a452]]  30.5331010000 p}
 
 
- Un compresor instancia ideas para el control del rango dinámico. 
- El audio tiene diferencias de volumen deseadas y no deseadas. 
- Gran parte del carácter de la música o voz está contenido por debajo de los ataques o picos _1 
- Existen herramientas para controlar e indicar el volumen. 
- Hay dispositivos que varían su ganancia dependiendo del nivel de la señal de entrada. Para ello, el compresor, primero debe tener algún método para determinar el nivel de la señal, y luego debe ser capaz de utilizarlo para controlar la ganancia._2 
+ Un compresor instancia ideas para el control del rango dinámico.
+ El audio tiene diferencias de volumen deseadas y no deseadas.
+ Gran parte del carácter de la música o voz está contenido por debajo de los ataques o picos _1
+ Existen herramientas para controlar e indicar el volumen.
+ Hay dispositivos que varían su ganancia dependiendo del nivel de la señal de entrada. Para ello, el compresor, primero debe tener algún método para determinar el nivel de la señal, y luego debe ser capaz de utilizarlo para controlar la ganancia._2
  Puede alterar las variaciones indeseables del nivel de la señal que, de otro modo, dificultarían a un instrumento mantener su balance al ensamblarse con otros instrumentos. _3
- La compresión ayuda a regular las proporciones cuando el audio de fondo se convierte en distractor. 
- La posición del micrófono se debe intencionar según el medidor y no lo visual. 
- Existen operaciónes de procesamiento de la señal de audio en las cuales se reduce el volumen de los sonidos fuertes o amplifica los sonidos leves, reduciendo o comprimiendo el rango dinámico de una señal de audio _4 
- http://www.tube-tech.com/wp-content/uploads/2018/05/Manual-CL-1B-180515.pdf 
- 1) https://dbxpro.com/en/product_documents/160-161-owners-manualpdf--2 
- 2) https://media.uaudio.com/assetlibrary/l/a/la-2a_manual.pdf 
- 3) http://library.lol/main/1BAB1DDA8F0B25EBC2493A0A7A9F3A2E 
- 4) https://vintageking.com/blog/2017/09/compressors-guide/ 
- __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1561][dd0ce352]]  30.5331020000 p}  
+ La compresión ayuda a regular las proporciones cuando el audio de fondo se convierte en distractor.
+ La posición del micrófono se debe intencionar según el medidor y no lo visual.
+ Existen operaciónes de procesamiento de la señal de audio en las cuales se reduce el volumen de los sonidos fuertes o amplifica los sonidos leves, reduciendo o comprimiendo el rango dinámico de una señal de audio _4
+ http://www.tube-tech.com/wp-content/uploads/2018/05/Manual-CL-1B-180515.pdf
+ 1) https://dbxpro.com/en/product_documents/160-161-owners-manualpdf--2
+ 2) https://media.uaudio.com/assetlibrary/l/a/la-2a_manual.pdf
+ 3) http://library.lol/main/1BAB1DDA8F0B25EBC2493A0A7A9F3A2E
+ 4) https://vintageking.com/blog/2017/09/compressors-guide/
+ __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1561][dd0ce352]]  30.5331020000 p}
 
-Para conocer los parámetros del compresor seguimos la invitación de Stavrou, vamos uno por uno, Ataque, Liberación, Umbral, Relación. __{[[file:/home/ff/SyncDocs/capture.ldg::68320][c15f11ed]]  30.5331021000 p}  
+Para conocer los parámetros del compresor seguimos la invitación de Stavrou, vamos uno por uno, Ataque, Liberación, Umbral, Relación. __{[[file:/home/ff/SyncDocs/capture.ldg::68254][c15f11ed]]  30.5331021000 p}
 
-Llevar al extremo un compresor permite escuchar su verdadero color, cuando el aparato empieza a reducir 10 o 12db el asunto se empieza a poner interesante pues ya hay una gran cantidad de coloracion particular de la unidad del compresion o del plugin.. allí se asoma el verdadero ´caracter´del procesador. __{[[file:/home/ff/SyncDocs/capture.ldg::68023][b295f1cd]]  30.5331022000 p}  
+Llevar al extremo un compresor permite escuchar su verdadero color, cuando el aparato empieza a reducir 10 o 12db el asunto se empieza a poner interesante pues ya hay una gran cantidad de coloracion particular de la unidad del compresion o del plugin.. allí se asoma el verdadero ´caracter´del procesador. __{[[file:/home/ff/SyncDocs/capture.ldg::67957][b295f1cd]]  30.5331022000 p}
 
-Un compresor es un dispositivo utilizado en el procesamiento de audio para gestionar el rango dinámico mediante el control de las diferencias de volumen en una señal. Este proceso permite ajustar la ganancia en función del nivel de la señal de entrada, eliminando variaciones indeseadas que dificultan el balance de un instrumento o voz en una mezcla. La operación del compresor implica determinar el nivel de la señal mediante un método predefinido y utilizar esta información para modificar la ganancia, ya sea reduciendo el volumen de los sonidos más fuertes o amplificando los más suaves, lo que resulta en una reducción efectiva del rango dinámico. Este mecanismo regula las proporciones entre los elementos de la mezcla, previniendo que el ruido de fondo interfiera con la señal principal y permitiendo un equilibrio entre los componentes. La posición del micrófono debe seleccionarse considerando las lecturas del medidor de señal y no solo aspectos visuales. 
- __{[[file:/home/ff/SyncDocs/capture.ldg::70378][1181d678]]  30.5332000000 p}  
+Un compresor es un dispositivo utilizado en el procesamiento de audio para gestionar el rango dinámico mediante el control de las diferencias de volumen en una señal. Este proceso permite ajustar la ganancia en función del nivel de la señal de entrada, eliminando variaciones indeseadas que dificultan el balance de un instrumento o voz en una mezcla. La operación del compresor implica determinar el nivel de la señal mediante un método predefinido y utilizar esta información para modificar la ganancia, ya sea reduciendo el volumen de los sonidos más fuertes o amplificando los más suaves, lo que resulta en una reducción efectiva del rango dinámico. Este mecanismo regula las proporciones entre los elementos de la mezcla, previniendo que el ruido de fondo interfiera con la señal principal y permitiendo un equilibrio entre los componentes. La posición del micrófono debe seleccionarse considerando las lecturas del medidor de señal y no solo aspectos visuales.
+ __{[[file:/home/ff/SyncDocs/capture.ldg::70312][1181d678]]  30.5332000000 p}
 
-"Peak is our enemy. Texture our Friend" "The human ear is more sensitive to texture than voltage" --Stavrou 
- __{[[file:/home/ff/SyncDocs/capture.ldg::68230][2957b43f]]  30.5340000000 p}  
+"Peak is our enemy. Texture our Friend" "The human ear is more sensitive to texture than voltage" --Stavrou
+ __{[[file:/home/ff/SyncDocs/capture.ldg::68164][2957b43f]]  30.5340000000 p}
 
-maxima ilusión con mínimo voltaje, distorsión, compresión, rango dinámico, SPL, guerra del volumen. 
- __{[[file:/home/ff/SyncDocs/capture.ldg::67496][43889c18]]  30.5340100000 p}  
+maxima ilusión con mínimo voltaje, distorsión, compresión, rango dinámico, SPL, guerra del volumen.
+ __{[[file:/home/ff/SyncDocs/capture.ldg::67430][43889c18]]  30.5340100000 p}
 
-FADE OUT                       __{[[file:/home/ff/SyncDocs/capture.ldg::68365][d6ab9ad7]]  30.5500000000 p}  
+FADE OUT                       __{[[file:/home/ff/SyncDocs/capture.ldg::68299][d6ab9ad7]]  30.5500000000 p}
 
-Hay ciertos finales que permiten acompañar la desaparición artística con la desaparición técnica, es que, en algunos casos, los sistemas tienen un sonido de base, sea por la suma de los ruidos de piso de cada componente, o tierra, hum etc. Así acompañar el final con un fadeout en el master puede hacer desaparecer la huella del sistema. __{[[file:/home/ff/SyncDocs/capture.ldg::59738][320de67f]]  30.5500100000 p}  
+Hay ciertos finales que permiten acompañar la desaparición artística con la desaparición técnica, es que, en algunos casos, los sistemas tienen un sonido de base, sea por la suma de los ruidos de piso de cada componente, o tierra, hum etc. Así acompañar el final con un fadeout en el master puede hacer desaparecer la huella del sistema. __{[[file:/home/ff/SyncDocs/capture.ldg::59663][320de67f]]  30.5500100000 p}
 
-La gentileza de desvanecer el ruido rosa __{[[file:/home/ff/SyncDocs/capture.ldg::68095][760b3658]]  30.5502000000 p}  
+La gentileza de desvanecer el ruido rosa __{[[file:/home/ff/SyncDocs/capture.ldg::68029][760b3658]]  30.5502000000 p}
 
-== LA PROPIA VOZ 
-   El operador de audio No puede desligarse de si mismo, a su manera grita a los postulantes "eso soy yo", aunque a veces sus gritos suenen como si dijera "eso es lo que desconozco" __{[[file:/home/ff/SyncDocs/capture.ldg::64900][ccf743b8]]  40.4000000000 p}  
+== LA PROPIA VOZ
+   El operador de audio No puede desligarse de si mismo, a su manera grita a los postulantes "eso soy yo", aunque a veces sus gritos suenen como si dijera "eso es lo que desconozco" __{[[file:/home/ff/SyncDocs/capture.ldg::64825][ccf743b8]]  40.4000000000 p}
 
-Respecto al reconocimiento, el operador de audio particular tiene una lucha solitaria, efímera, pocos elementos tiene el "otro" para juzgar su desempeño. 
- Dice Leila Gerreiro "... y como pasa con todas las cosas importantes 
- nadie pregunta, menos mal." __{[[file:/home/ff/SyncDocs/capture.ldg::68437][79683911]]  40.4010000000 p}  
+Respecto al reconocimiento, el operador de audio particular tiene una lucha solitaria, efímera, pocos elementos tiene el "otro" para juzgar su desempeño.
+ Dice Leila Gerreiro "... y como pasa con todas las cosas importantes
+ nadie pregunta, menos mal." __{[[file:/home/ff/SyncDocs/capture.ldg::68371][79683911]]  40.4010000000 p}
 
-¿Qué diferencia un operador de audio de otro? ¿dinamica?, ¿efectos¿, reaccion ante situaciones¿, ¿solos¿, ¿finales¿ __{[[file:/home/ff/SyncDocs/capture.ldg::61508][789a2af1]]  40.4020000000 p}  
+¿Qué diferencia un operador de audio de otro? ¿dinamica?, ¿efectos¿, reaccion ante situaciones¿, ¿solos¿, ¿finales¿ __{[[file:/home/ff/SyncDocs/capture.ldg::61433][789a2af1]]  40.4020000000 p}
 
-¿Cómo inciden las herramientas? Hemos escuchado mezclas fascinantes usando muchas herramientas, también unas terribles, en contraste, hemos escuchado mezclas fascinantes usando mínimas herramientas, también otras terribles. Pareciera entonces que cobra importancia aprender a decidir en qué casos las herramientas sirven . Debatamos, ¿cuál es el objetivo de una herramienta? procesadores, micrófonos, consolas, interfaces, parlantes, analizadores, efectos. __{[[file:/home/ff/SyncDocs/capture.ldg::67318][300b3438]]  50.0000000000 p}  
+¿Cómo inciden las herramientas? Hemos escuchado mezclas fascinantes usando muchas herramientas, también unas terribles, en contraste, hemos escuchado mezclas fascinantes usando mínimas herramientas, también otras terribles. Pareciera entonces que cobra importancia aprender a decidir en qué casos las herramientas sirven . Debatamos, ¿cuál es el objetivo de una herramienta? procesadores, micrófonos, consolas, interfaces, parlantes, analizadores, efectos. __{[[file:/home/ff/SyncDocs/capture.ldg::67252][300b3438]]  50.0000000000 p}
 
-Considerando restricciones complejas de acceso a recursos se hace crítico el proceso de planeación y agendamiento. Ruta crítica, manejo de márgenes (¿tiempo libre? se encuentra un amigo en el campo de futbol, conta, contá, un cafecito?), Indicadores y métricas (sistemas en verde? rojo?)  Referente de Planning & Scheduling Group (PSG) en NASA https://www.nasa.gov/intelligent-systems-division/autonomous-systems-and-robotics/planning-and-scheduling-group/ __{[[file:/home/ff/SyncDocs/capture.ldg::67593][9ac911e2]]  50.0000000000 p}  
+Considerando restricciones complejas de acceso a recursos se hace crítico el proceso de planeación y agendamiento. Ruta crítica, manejo de márgenes (¿tiempo libre? se encuentra un amigo en el campo de futbol, conta, contá, un cafecito?), Indicadores y métricas (sistemas en verde? rojo?)  Referente de Planning & Scheduling Group (PSG) en NASA https://www.nasa.gov/intelligent-systems-division/autonomous-systems-and-robotics/planning-and-scheduling-group/ __{[[file:/home/ff/SyncDocs/capture.ldg::67527][9ac911e2]]  50.0000000000 p}
 
-== HERRAMIENTAS                __{[[file:/home/ff/SyncDocs/capture.ldg::68536][d21ff81b]]  50.0000000000 p}  
+== HERRAMIENTAS                __{[[file:/home/ff/SyncDocs/capture.ldg::68470][d21ff81b]]  50.0000000000 p}
 
-DIAGRAMA/SCORE                 __{[[file:/home/ff/SyncDocs/capture.ldg::68383][c7e615f8]]  50.1000000000 p}  
+DIAGRAMA/SCORE                 __{[[file:/home/ff/SyncDocs/capture.ldg::68317][c7e615f8]]  50.1000000000 p}
 
-El Score como herramienta de localización en la pieza. No es necesario saber leer las notas, se puede identificar los solos, las entradas y los finales.  Diagramas  RSVP  ¿Qué tipo de score le sirve al operador de audio particular? __{[[file:/home/ff/SyncDocs/capture.ldg::67486][574ac629]]  50.1010000000 p}  
+El Score como herramienta de localización en la pieza. No es necesario saber leer las notas, se puede identificar los solos, las entradas y los finales.  Diagramas  RSVP  ¿Qué tipo de score le sirve al operador de audio particular? __{[[file:/home/ff/SyncDocs/capture.ldg::67420][574ac629]]  50.1010000000 p}
 
-RIDER 
-  Lista de deseos, o lo mínimo sin lo cual renuncio __{[[file:/home/ff/SyncDocs/capture.ldg::67978][4234da44]]  50.1010000000 p}  
+RIDER
+  Lista de deseos, o lo mínimo sin lo cual renuncio __{[[file:/home/ff/SyncDocs/capture.ldg::67912][4234da44]]  50.1010000000 p}
 
-"The radio is my musical instrument" R.Rubin  El escenario como instrumento __{[[file:/home/ff/SyncDocs/capture.ldg::67291][6735ed42]]  60.0000000000 p}  
+"The radio is my musical instrument" R.Rubin  El escenario como instrumento __{[[file:/home/ff/SyncDocs/capture.ldg::67225][6735ed42]]  60.0000000000 p}
 
-¿Qué es lo importante?  Para el operador : que todo llegue  Para el instrumentista: que se escuche, que escuche las entradas  Lo más importante ¿que a nadie le pase nada?  Asegurar a las personas? (¿seres?) Los Bienes  Asegurar una reputación?  Que el evento suceda  Que sucedaa bien  Que sea wow __{[[file:/home/ff/SyncDocs/capture.ldg::67546][65884897]]  60.0000000000 p}  
+¿Qué es lo importante?  Para el operador : que todo llegue  Para el instrumentista: que se escuche, que escuche las entradas  Lo más importante ¿que a nadie le pase nada?  Asegurar a las personas? (¿seres?) Los Bienes  Asegurar una reputación?  Que el evento suceda  Que sucedaa bien  Que sea wow __{[[file:/home/ff/SyncDocs/capture.ldg::67480][65884897]]  60.0000000000 p}
 
-"## Preamps Carlos Bedoya Va a ser dificil que encuentre un preamp mas transparente que un TubeUlent o un Tonerator. Pero un Millenia o un Hardy aguanta." __{[[file:/home/ff/SyncDocs/capture.ldg::67748][138aa50e]]  60.0000000000 p}  
+"## Preamps Carlos Bedoya Va a ser dificil que encuentre un preamp mas transparente que un TubeUlent o un Tonerator. Pero un Millenia o un Hardy aguanta." __{[[file:/home/ff/SyncDocs/capture.ldg::67682][138aa50e]]  60.0000000000 p}
 
-Masmelos  - El canal místico ¿el 7?  - Decirlo pasíto  - Escribirlo atrás de la puerta  - Defensive FOH  - ¿Quién es el ruteador y sus manitos ágiles? __{[[file:/home/ff/SyncDocs/capture.ldg::67914][14b23137]]  60.0000000000 p}  
+Masmelos  - El canal místico ¿el 7?  - Decirlo pasíto  - Escribirlo atrás de la puerta  - Defensive FOH  - ¿Quién es el ruteador y sus manitos ágiles? __{[[file:/home/ff/SyncDocs/capture.ldg::67848][14b23137]]  60.0000000000 p}
 
-"nada más inutil que hacer eficientemente lo que nunca debería haberse hecho" __{[[file:/home/ff/SyncDocs/capture.ldg::67942][9428af33]]  60.0000000000 p}  
+"nada más inutil que hacer eficientemente lo que nunca debería haberse hecho" __{[[file:/home/ff/SyncDocs/capture.ldg::67876][9428af33]]  60.0000000000 p}
 
-"No se puede des-quemar una arepa luego de quemarse" Estructura de ganancia, TV, grabación __{[[file:/home/ff/SyncDocs/capture.ldg::68005][bd13c559]]  60.0000000000 p}  
+"No se puede des-quemar una arepa luego de quemarse" Estructura de ganancia, TV, grabación __{[[file:/home/ff/SyncDocs/capture.ldg::67939][bd13c559]]  60.0000000000 p}
 
-¿hay diferentes tipos de ruidos? RF, tierra, filtros, phantom power __{[[file:/home/ff/SyncDocs/capture.ldg::67347][6511a17e]]  70.0000000000 p}  
+¿hay diferentes tipos de ruidos? RF, tierra, filtros, phantom power __{[[file:/home/ff/SyncDocs/capture.ldg::67281][6511a17e]]  70.0000000000 p}
 
-El sonido y el cuerpo. Frecuecias bajas y la piel, frecuencias altas y la dirección, mínima presión sonora, máxima? __{[[file:/home/ff/SyncDocs/capture.ldg::67506][a2b9b20d]]  70.0000000000 p}  
+El sonido y el cuerpo. Frecuecias bajas y la piel, frecuencias altas y la dirección, mínima presión sonora, máxima? __{[[file:/home/ff/SyncDocs/capture.ldg::67440][a2b9b20d]]  70.0000000000 p}
 
-== PRÁCTICAS                   __{[[file:/home/ff/SyncDocs/capture.ldg::68482][963c3ff1]]  80.0000000000 p}  
+== PRÁCTICAS                   __{[[file:/home/ff/SyncDocs/capture.ldg::68416][963c3ff1]]  80.0000000000 p}
 
-El operador de audio en festivales tiene vértigo por resolver muchas cosas a la vez, y el tiempo para hacerlo es cronométrico, la ventana de acción es tan estrecha y el impacto de las fallas tan notorio, que amerita tomar tiempo para practicar. __{[[file:/home/ff/SyncDocs/capture.ldg::67776][29943986]]  80.0001000000 p}  
+El operador de audio en festivales tiene vértigo por resolver muchas cosas a la vez, y el tiempo para hacerlo es cronométrico, la ventana de acción es tan estrecha y el impacto de las fallas tan notorio, que amerita tomar tiempo para practicar. __{[[file:/home/ff/SyncDocs/capture.ldg::67710][29943986]]  80.0001000000 p}
 
-Período de transición del novato al experto, ¿qué cambia?  ¿cómo se enfrentan los problemas? ¿cómo se reacciona? __{[[file:/home/ff/SyncDocs/capture.ldg::67436][1ff5252d]]  80.0100000000 p}  
+Período de transición del novato al experto, ¿qué cambia?  ¿cómo se enfrentan los problemas? ¿cómo se reacciona? __{[[file:/home/ff/SyncDocs/capture.ldg::67370][1ff5252d]]  80.0100000000 p}
 
-Einstein y John Von Neumann representan velocidades diferentes, cada cual a su ritmo. __{[[file:/home/ff/SyncDocs/capture.ldg::68077][8e7d4989]]  80.0100000000 p}  
+Einstein y John Von Neumann representan velocidades diferentes, cada cual a su ritmo. __{[[file:/home/ff/SyncDocs/capture.ldg::68011][8e7d4989]]  80.0100000000 p}
 
-¿Qué ejercios o prácticas puede profundizar las destrezas del operador de audio particular? En otra época pareciera que practicar la orientación en una consola análoga podría lograrse, a bajo costo usando, plantillas en papel en tamaño real, actualmente las superficie de las consolas digitales tienden a disminuir su extensión y se expande es en capas abstractas. ¿cómo orientarse en un sistema de capas?. ¿cómo aumentar la creatividad? (prueba de sonido) escucha crítica, __{[[file:/home/ff/SyncDocs/capture.ldg::67309][3e62c557]]  80.1000000000 p}  
+¿Qué ejercios o prácticas puede profundizar las destrezas del operador de audio particular? En otra época pareciera que practicar la orientación en una consola análoga podría lograrse, a bajo costo usando, plantillas en papel en tamaño real, actualmente las superficie de las consolas digitales tienden a disminuir su extensión y se expande es en capas abstractas. ¿cómo orientarse en un sistema de capas?. ¿cómo aumentar la creatividad? (prueba de sonido) escucha crítica, __{[[file:/home/ff/SyncDocs/capture.ldg::67243][3e62c557]]  80.1000000000 p}
 
-Balancear una mezcla rápidamente. Para evitar la intuición de ajustar los faders se pide al practicante que solo dicte los movimientos, al inicio en pasos de 4db. El master no puede pasar de -12db __{[[file:/home/ff/SyncDocs/capture.ldg::68203][8d01a3a7]]  80.1000000000 p}  
+Balancear una mezcla rápidamente. Para evitar la intuición de ajustar los faders se pide al practicante que solo dicte los movimientos, al inicio en pasos de 4db. El master no puede pasar de -12db __{[[file:/home/ff/SyncDocs/capture.ldg::68137][8d01a3a7]]  80.1000000000 p}
 
-Balancear una mezcla sin escuchar. Se pide al practicante que balanceé una mezcla según las lecturas que presentan los medidores, considerando los canales individuales, VCA y master __{[[file:/home/ff/SyncDocs/capture.ldg::68212][6654c513]]  80.2000000000 p}  
+Balancear una mezcla sin escuchar. Se pide al practicante que balanceé una mezcla según las lecturas que presentan los medidores, considerando los canales individuales, VCA y master __{[[file:/home/ff/SyncDocs/capture.ldg::68146][6654c513]]  80.2000000000 p}
 
-Black Stars, Mauro Parlantes, Victor García, Juan Posada, Ashok, Piero, Jorge Vásquez, Juan Carlos, Vilar, Dinosaurio, relevos, macarena __{[[file:/home/ff/SyncDocs/capture.ldg::67327][5fd7af7d]]  90.0000000000 p}  
+Black Stars, Mauro Parlantes, Victor García, Juan Posada, Ashok, Piero, Jorge Vásquez, Juan Carlos, Vilar, Dinosaurio, relevos, macarena __{[[file:/home/ff/SyncDocs/capture.ldg::67261][5fd7af7d]]  90.0000000000 p}
 
-== APENDICES                   __{[[file:/home/ff/SyncDocs/capture.ldg::68491][1273d116]]  90.0000000000 p}  
+== APENDICES                   __{[[file:/home/ff/SyncDocs/capture.ldg::68425][1273d116]]  90.0000000000 p}
 
-Ruta de la señal ¿A dónde va la señal luego de la consola? ¿cualquier cable es lo mismo? ¿cable de señal? ¿de potencia?. __{[[file:/home/ff/SyncDocs/capture.ldg::67386][d49d5a4e]]  90.0010000000 p}  
+Ruta de la señal ¿A dónde va la señal luego de la consola? ¿cualquier cable es lo mismo? ¿cable de señal? ¿de potencia?. __{[[file:/home/ff/SyncDocs/capture.ldg::67320][d49d5a4e]]  90.0010000000 p}
 
-ROLES/RELACIONES               __{[[file:/home/ff/SyncDocs/capture.ldg::68428][0ba71d73]]  90.2000000000 p}  
+ROLES/RELACIONES               __{[[file:/home/ff/SyncDocs/capture.ldg::68362][0ba71d73]]  90.2000000000 p}
 
-Estructura de poder en el entorno del sonido directo.  Gerente de Producción, Gerente de Escenario, Gerente de desplazamientos. ¿cambia la estructura de poder cuando el grupo sube? ¿toma el poder? __{[[file:/home/ff/SyncDocs/capture.ldg::67556][946b4b84]]  90.2010000000 p}  
+Estructura de poder en el entorno del sonido directo.  Gerente de Producción, Gerente de Escenario, Gerente de desplazamientos. ¿cambia la estructura de poder cuando el grupo sube? ¿toma el poder? __{[[file:/home/ff/SyncDocs/capture.ldg::67490][946b4b84]]  90.2010000000 p}
 
-Motivación, Empatía. ¿Porqué se esfuerzan las personas? ¿Dinero? ¿Afecto? ¿Reconocimiento? __{[[file:/home/ff/SyncDocs/capture.ldg::67526][7cb78901]]  90.2011000000 p}  
+Motivación, Empatía. ¿Porqué se esfuerzan las personas? ¿Dinero? ¿Afecto? ¿Reconocimiento? __{[[file:/home/ff/SyncDocs/capture.ldg::67460][7cb78901]]  90.2011000000 p}
 
-Comunicación. Comunicación no violenta, ¿guardar silencio?. Con el equipo, proveedores, artista. ¿términos abstractos? ¿precisión? ¿dudas? __{[[file:/home/ff/SyncDocs/capture.ldg::67516][36fa4b0e]]  90.2012000000 p}  
+Comunicación. Comunicación no violenta, ¿guardar silencio?. Con el equipo, proveedores, artista. ¿términos abstractos? ¿precisión? ¿dudas? __{[[file:/home/ff/SyncDocs/capture.ldg::67450][36fa4b0e]]  90.2012000000 p}
 
-Ambientación emotiva respecto al sonido directo. Mantener a los músicos en el lenguaje del arte y emotividad, distanciarlos del problema técnico. Relieve simbólico. Visualización (Los Arboles, insultelos, la pierna en el barranco) __{[[file:/home/ff/SyncDocs/capture.ldg::67476][275b3e81]]  90.2020000000 p}  
+Ambientación emotiva respecto al sonido directo. Mantener a los músicos en el lenguaje del arte y emotividad, distanciarlos del problema técnico. Relieve simbólico. Visualización (Los Arboles, insultelos, la pierna en el barranco) __{[[file:/home/ff/SyncDocs/capture.ldg::67410][275b3e81]]  90.2020000000 p}
 
-== ECUACIONES                  __{[[file:/home/ff/SyncDocs/capture.ldg::68392][0f1aea68]]  90.3000000000 p}  
+== ECUACIONES                  __{[[file:/home/ff/SyncDocs/capture.ldg::68326][0f1aea68]]  90.3000000000 p}
 
-L=c/F  Longitud de onda = velocidad del sonido / Frecuencia (a 22℃ aprox 344mts/segundo) __{[[file:/home/ff/SyncDocs/capture.ldg::68275][4806dcc7]]  90.3010000000 p}  
+L=c/F  Longitud de onda = velocidad del sonido / Frecuencia (a 22℃ aprox 344mts/segundo) __{[[file:/home/ff/SyncDocs/capture.ldg::68209][4806dcc7]]  90.3010000000 p}
 
-Nivel Relativo (dB) = 20 * log10(nivel1/nivel2) __{[[file:/home/ff/SyncDocs/capture.ldg::68293][9962acd3]]  90.3010000000 p}  
+Nivel Relativo (dB) = 20 * log10(nivel1/nivel2) __{[[file:/home/ff/SyncDocs/capture.ldg::68227][9962acd3]]  90.3010000000 p}
 
-P=IE  P potencia en vatios, E voltaje en voltios, Resistencia en Ohmios __{[[file:/home/ff/SyncDocs/capture.ldg::68302][77b07363]]  90.3010000000 p}  
+P=IE  P potencia en vatios, E voltaje en voltios, Resistencia en Ohmios __{[[file:/home/ff/SyncDocs/capture.ldg::68236][77b07363]]  90.3010000000 p}
 
-Intuición, entender las fuerzas que se mueven en una ecuación, puede llevar al extremo cada término para entender su implicación. __{[[file:/home/ff/SyncDocs/capture.ldg::68446][f1f6e5d8]]  90.3010000000 p}  
+MICRÓFONOS                     __{[[file:/home/ff/SyncDocs/capture.ldg::68344][62b45df1]]  90.7000000000 p}
 
-40hz 8.62 mts camión de carga, 100hz 3,45mts Carro compacto, 250hz 1.38mts altura del hombro, 500hz 0.69 brazo, 1khz 0.34mts  codo a puño, 4khz 0.25mts cuatro dedos, 16khz 0,022 un dedo __{[[file:/home/ff/SyncDocs/capture.ldg::68284][30a096e5]]  90.3020000000 p}  
+Los micrófonos pasivos requieren más participación del preamplificador, desde la perspectiva del preamplificador algunos micrófonos condensadores, en su guerra por el volumen, pueden operarse como un corto circuito. S.Albini __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1242][0dbef787]]  90.7010000000 p}
 
-(defun panico (chan-estrella) 
-  (-nivel (si (=! chan chan-estrella) 
- chan))) __{[[file:/home/ff/SyncDocs/capture.ldg::68248][f52e2b52]]  90.3070000000 p}  
+Cuando se embarca en una prueba de sonido, si el ritmo de trabajo se ve obstaculizado por innumerables fallas técnicas, se va erosionar el espíritu creativo, y va a dejar exhaustos a sus músicos, nos preguntamos entonces ¿cómo se prueba sonido? ¿a dónde se mira? ¿cómo se pide que se interpreten los instrumentos? (¿forte?)  ¿cómo se habla? (mudos y sordos) señas de mezcla, señas de ruido. __{[[file:/home/ff/SyncDocs/capture.ldg::67350][5695ccb9]]  90.8000000000 p}
 
-ARREGLOS SUBS                  __{[[file:/home/ff/SyncDocs/capture.ldg::68401][5cbeea6a]]  90.6000000000 p}  
+Anéctodas ****  **** VJ VGA **** 7 minutos para el cambio de un cable **** Eficiencia, mojes Zen, la repetición **** Prueba de sonido en washignton Black Cat Fonseca, falsa comodidad, ¿no son capaces de probar en un media hora? los guerreros.**** Bienvenidos al mundo de lo poco intuitivo.**** Una raya donde se divide la ficción __{[[file:/home/ff/SyncDocs/capture.ldg::67857][0589c875]]  90.8000000000 p}
 
-Para configurar un cardioide simple en cualquier lugar igualamos las presiones en la frequencia deseada inverimos polaridad y medimos. __{[[file:/home/ff/SyncDocs/capture.ldg::68500][3c86facc]]  90.6005000000 p}  
+RIESGO                         __{[[file:/home/ff/SyncDocs/capture.ldg::67903][61beebbd]]  90.8010000000 p}
 
-END FIRE: tomado de http://fors.doctorproaudio.com/messages/23559.html  por mauricio "magu" ramirez Hola Antonio. Existen 2 técnicas diferentes. Una de ellas fue descrita en 1947 en el libro Acoustical Engineering (Harry Olson, pags 38-39), y se denomina "END FIRED LINE SOURCE". Requiere al menos 4 subwoofers para poder cancelar 2 octavas (tipicamente desde 40Hz hasta 125Hz). Consiste en colocar subwoofers uno al frente de otro y añadir "delay" progresivo (en el caso de 4 subwoofers se requieren 4 canales de "delay" electronico). la distancia entre cada uno de los subwoofers (centro-centro, o cono-cono) es la que difine el valor del delay electronico (distancia convertida a tiempo en milisegundos). La separacion entre el primero y el segundo elemento define el centro de la frecuencia superior de cancelacion trasera. La separacion entre el primero y el tercer elemento define el centro de la segunda frecuencia de cancelacion trasera (la mitad del caso anterior). La separacion entre el primero y el cuarto elemento define el centro de la tercer frecuencia de cancelacion trasera (un tercio del primer caso). Por ejemplo, para cancelar desde 30Hz hasta 125Hz se debe hacer lo siguiente: Subwoofer 1 (0ms de delay) Subwoofer 2 (1mt adelante del primero, 2.94ms de delay) Subwoofer 3 (2mt adelante del primero, 5.88ms de delay) Subwoofer 4 (3mt adelante del primero, 8.82ms de delay) Nota: Todos los subwoofers deben tener la misma polaridad y nivel, asi como la misma topologia de filtros HPF y LPF (orden o pendiente). El resultado es suma de 12dB en el frente (debido al uso de 4 subwoofers), y aprox. 20 dB de reduccion atras. Esta tecnica la he usado desde el año 2003 en conciertos en varios paises de Europa, Asia y America (y se demuestra y explica en todos los seminarios que imparto). __{[[file:/home/ff/SyncDocs/capture.ldg::68041][e253b440]]  90.6010000000 p}  
+Una sonido en directo requiere interconetar muchos elementos, cada soldadura es suceptible a fallar. Ante la incertidumbre en sistemas complejos podemos clasificar los riesgos bajo los parametros Posibilidad y Gravedad, relacionandolos podemos visualizar una  matriz de riesgo que nos permite gestionar el riesgo, en una dimensión multiplicamos los valores, en dos dimensiones (plano cartesiano) posicionamos los valores y dividimos unos cuadrantes, tratamos de tercerizar los cuadrantes de mayor riesgo.
+  Matriz de riesgos (iss)			Evasión de riesgos			Transferencia de riesgos			Reducción de riesgos			Retención de riesgos (se acepta y se presupuesta) __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1255][6b5e026d]]  90.8010000000 p}
 
-MICRÓFONOS                     __{[[file:/home/ff/SyncDocs/capture.ldg::68410][62b45df1]]  90.7000000000 p}  
+MANEJO TIEMPO
+ Presupuestos de tiempo, presupuestar lo desconocido, la primera vez que lo hago, ruta crítica y los colchones.
+    Un listado con tiempo regresivo permite al equipo de trabajo verificar el estado de varias tareas en un tiempo determinado T -10h.
+    Mínimos intervalos usables en recursos compartidos, consolas, escenario, micrófonos, intercomunicadores, transporte, camerino.  Coordinarse cuando es tu turno Algoritmo Meyns para manejo de pistas de aterrizaje   https://aviationsystems.arc.nasa.gov/publications/2021/NASA-TM-20210000561.pdf __{[[file:/home/ff/SyncDocs/capture.ldg::67885][312c1e8a]]  90.8010010000 p}
 
-Los micrófonos pasivos requieren más participación del preamplificador, desde la perspectiva del preamplificador algunos micrófonos condensadores, en su guerra por el volumen, pueden operarse como un corto circuito. S.Albini __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1242][0dbef787]]  90.7010000000 p}  
-
-Los micrófonos de cinta (ribbon)  usan un transductor de micrones,  la cinta puede ser larga o corta,  al ajustar las impedancias entre el mic y ___ se cambia la apertura (respuesta en el espetro). Algunos mencionados: Soyuz / Aea / Coles, los Ohma de 1.8 micrones sintonizados a 16hz __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1211][103b387f]]  90.7070000000 p}  
-
-Cuando se embarca en una prueba de sonido, si el ritmo de trabajo se ve obstaculizado por innumerables fallas técnicas, se va erosionar el espíritu creativo, y va a dejar exhaustos a sus músicos, nos preguntamos entonces ¿cómo se prueba sonido? ¿a dónde se mira? ¿cómo se pide que se interpreten los instrumentos? (¿forte?)  ¿cómo se habla? (mudos y sordos) señas de mezcla, señas de ruido. __{[[file:/home/ff/SyncDocs/capture.ldg::67416][5695ccb9]]  90.8000000000 p}  
-
-Anéctodas ****  **** VJ VGA **** 7 minutos para el cambio de un cable **** Eficiencia, mojes Zen, la repetición **** Prueba de sonido en washignton Black Cat Fonseca, falsa comodidad, ¿no son capaces de probar en un media hora? los guerreros.**** Bienvenidos al mundo de lo poco intuitivo.**** Una raya donde se divide la ficción __{[[file:/home/ff/SyncDocs/capture.ldg::67923][0589c875]]  90.8000000000 p}  
-
-PRODUCCION                     __{[[file:/home/ff/SyncDocs/capture.ldg::68419][5d53f782]]  90.8000000000 p}  
-
-¿Cómo se visten en la música clásica? de negro, manga larga, desaparecer, stage mánager de La Fourcade en feria de flores. __{[[file:/home/ff/SyncDocs/capture.ldg::67960][2f2a815c]]  90.8002000000 p}  
-
-RIESGO                         __{[[file:/home/ff/SyncDocs/capture.ldg::67969][61beebbd]]  90.8010000000 p}  
-
-Una sonido en directo requiere interconetar muchos elementos, cada soldadura es suceptible a fallar, Ante la incertidumbre en sistemas complejos podemos clasificar los riesgos bajo los parametros Posibilidad y Gravedad, relacionandolos podemos visualizar una  matriz de riesgo que nos permite gestionar el riesgo, en una dimensión multiplicamos los valores, en dos dimensiones (plano cartesiano) posicionamos los valores y dividimos unos cuadrantes, tratamos de tercerizar los cuadrantes de mayor riesgo. 
-  Matriz de riesgos (iss)			Evasión de riesgos			Transferencia de riesgos			Reducción de riesgos			Retención de riesgos (se acepta y se presupuesta) __{[[file:/home/ff/SyncDocs/FLC_narracion.ldg::1255][6b5e026d]]  90.8010000000 p}  
-
-MANEJO TIEMPO 
- Presupuestos de tiempo, presupuestar lo desconocido, la primera vez que lo hago, ruta crítica y los colchones. 
-    Un listado con tiempo regresivo permite al equipo de trabajo verificar el estado de varias tareas en un tiempo determinado T -10h. 
-    Mínimos intervalos usables en recursos compartidos, consolas, escenario, micrófonos, intercomunicadores, transporte, camerino.  Coordinarse cuando es tu turno Algoritmo Meyns para manejo de pistas de aterrizaje   https://aviationsystems.arc.nasa.gov/publications/2021/NASA-TM-20210000561.pdf __{[[file:/home/ff/SyncDocs/capture.ldg::67951][312c1e8a]]  90.8010010000 p}  
-
-Mínimos intervalos usables en recursos compartidos, consolas, escenario, micrófonos, intercomunicadores, transporte, camerino.  Coordinarse cuando es tu turno Algoritmo Meyns para manejo de pistas de aterrizaje   https://aviationsystems.arc.nasa.gov/publications/2021/NASA-TM-20210000561.pdf __{[[file:/home/ff/SyncDocs/capture.ldg::67584][b8a9afe5]]  90.8010020000 p}  
-
+Mínimos intervalos usables en recursos compartidos, consolas, escenario, micrófonos, intercomunicadores, transporte, camerino.  Coordinarse cuando es tu turno Algoritmo Meyns para manejo de pistas de aterrizaje   https://aviationsystems.arc.nasa.gov/publications/2021/NASA-TM-20210000561.pdf __{[[file:/home/ff/SyncDocs/capture.ldg::67518][b8a9afe5]]  90.8010020000 p}
