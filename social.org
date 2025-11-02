@@ -42,3 +42,23 @@
 #+FOLLOW: https://muse-amuse.in/~punchagan/social.org
 #+FOLLOW: https://plakspin.nl/social.org
 #+FOLLOW: https://glenelg.io/social.org
+
+* Posts
+** Función en elisp para consultar e insertar una cuenta seleccionada de las opciones de cuentas definidas en un archivo
+
+#+BEGIN_SRC elisp :results none
+(defun insertar-cuenta ()
+  "Inserta cuenta usando el sistema de autocompletado del minibuffer"
+  (interactive)
+  (let* ((cuentas-history  (ledger-accounts-list-in-file "~/ruta/a/plan_de_cuentas.ldg"))
+         (cuenta (completing-read "consulta cuenta: " cuentas-history)))
+    (insert cuenta)))
+#+END_SRC
+
+
+:PROPERTIES:
+:ID: 2025-11-02T16:26:32-0500
+:TAGS: #elisp #ledger-cli #emacs #plaintextaccounting
+:CLIENT: org-social.el
+:MOOD:
+:END:
