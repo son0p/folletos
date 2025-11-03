@@ -42,6 +42,7 @@
 #+FOLLOW: https://muse-amuse.in/~punchagan/social.org
 #+FOLLOW: https://plakspin.nl/social.org
 #+FOLLOW: https://glenelg.io/social.org
+#+FOLLOW: https://raw.githubusercontent.com/son0p/folletos/refs/heads/main/social.org
 
 * Posts
 ** Función en elisp para consultar e insertar una cuenta seleccionada de las opciones de cuentas definidas en un archivo
