@@ -63,3 +63,39 @@
 :CLIENT: org-social.el
 :MOOD:
 :END:
+
+** Escuchar scripts de ChucK con EMMS (en Guix+Pipewire)
+Al integrar ChucK con EMMS para reproducir archivos =.ck= usando =pw-jack= en Guix con PipeWire, los archivos se saltaban sin reproducir. El log mostraba =chuck: not found=. El problema raíz era que =pw-jack= buscaba =chuck= en su PATH pero no lo encontraba, a pesar de que Emacs sí lo encontraba con =executable-find=.
+
+La causa está en cómo Emacs maneja rutas de ejecutables versus cómo los subprocesos las heredan. Emacs usa la variable interna =exec-path= que es una lista de directorios donde buscar ejecutables al llamar funciones como =executable-find=, =call-process= o =start-process=. Esta variable es local a Emacs y no se propaga a procesos hijos. En contraste, la variable de entorno =PATH= es la que consultan todos los procesos según el estándar POSIX y sí se hereda a subprocesos.
+
+Cuando EMMS ejecuta =pw-jack chuck archivo.ck=, primero lanza =pw-jack= como proceso hijo. Emacs usa =exec-path= para encontrar =pw-jack= en el perfil de Guix, lo ejecuta correctamente, y ese proceso hereda el =PATH= del entorno de Emacs. Luego =pw-jack= intenta ejecutar =chuck=, pero consulta su propio =PATH= heredado, no el =exec-path= de Emacs. Si =chuck= está en =~/Scripts= y esa ruta solo está en =exec-path= pero no en =PATH=, =pw-jack= falla.
+
+La solución es configurar tanto =exec-path= como =PATH=. El =exec-path= permite que Emacs encuentre ejecutables directamente. El =setenv= actualiza la variable de entorno =PATH= que heredarán todos los subprocesos que lance Emacs, incluyendo =pw-jack=. Con =PATH= correctamente configurado, =pw-jack= puede ejecutar =chuck= por nombre. Esta configuración está verificada en Guix System con PipeWire, asumiendo =chuck= en =~/Scripts= y =pw-jack= disponible en el perfil de Guix Home.
+
+#+begin_src emacs-lisp
+;; Configurar exec-path para Emacs y PATH para subprocesos
+(let ((chuck-dir (expand-file-name "~/Scripts")))
+  ;; Para que Emacs encuentre chuck con executable-find
+  (add-to-list 'exec-path chuck-dir)
+  ;; Crítico: para que subprocesos como pw-jack hereden la ruta
+  (setenv "PATH" (concat chuck-dir ":" (getenv "PATH"))))
+
+;; Definir player de ChucK
+(require 'emms-player-simple)
+
+(define-emms-simple-player chuck '(file)
+  "\\.ck\\'"
+  "pw-jack" "chuck")
+
+(add-to-list 'emms-player-list 'emms-player-chuck)
+#+end_src
+
+Verificar con =(emms-player-for '(*track* (type . file) (name . "test.ck")))= que retorna =emms-player-chuck=. El audio se enruta a PipeWire vía =pw-jack= al ejecutar =M-x emms-play-file= sobre un archivo =.ck=.
+
+:PROPERTIES:
+:ID: 2025-12-14T07:18:21-0500
+:TAGS: #elisp #emacs #emms #chuck #music
+:CLIENT: org-social.el
+:MOOD:
+:END:
