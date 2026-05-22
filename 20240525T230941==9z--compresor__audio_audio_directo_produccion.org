@@ -1,0 +1,702 @@
+#+title:      compresor
+#+date:       [2024-01-05 Fri 00:00]
+#+filetags:   :audio:audio:directo:produccion:
+#+identifier: 20240525T230941
+#+context:
+#+status: albedo
+#+riesgo: : (1*1)
+#+id: dd0ce352
+
+COMPRESOR(1)                   PROCESAMIENTO DE SEÑAL                   COMPRESOR(1)
+
+NOMBRE
+       compresor — reductor dinámico de amplitud para señales de audio
+
+SINOPSIS
+       El compresor es un dispositivo o proceso que reduce el rango dinámico de
+       una señal de audio atenuando los niveles que superan un umbral definido.
+       Opera en el dominio del tiempo sobre la envolvente de amplitud de la señal.
+
+DESCRIPCIÓN
+       Un compresor de audio monitorea continuamente el nivel de entrada y aplica
+       ganancia negativa cuando dicho nivel supera el umbral configurado
+       (threshold). La cantidad de atenuación está determinada por la relación de
+       compresión (ratio). El comportamiento temporal de la atenuación está
+       gobernado por los parámetros attack y release. La ganancia de salida se
+       ajusta mediante el parámetro makeup gain para compensar la reducción de
+       nivel producida por la compresión.
+
+       El procesamiento puede operar en modo feedforward, donde el nivel de la
+       señal original controla el detector, o en modo feedback, donde el nivel
+       de la señal ya procesada cierra el lazo de control. La mayoría de
+       implementaciones modernas operan en feedforward.
+
+───────────────────────────────────────────────────────────────────────────────
+
+PARÁMETROS
+
+THRESHOLD
+       Expresado en dBFS. Define el nivel a partir del cual comienza la
+       reducción de ganancia. Señales por debajo del threshold atraviesan el
+       compresor sin modificación de ganancia (región lineal). Señales por
+       encima son procesadas según el ratio vigente.
+
+       El rango habitual es -60 dBFS a 0 dBFS. Un valor de -20 dBFS activa la
+       compresión sobre los picos que superen ese nivel.
+
+RATIO
+       Valor adimensional expresado como N:1. Indica cuántos dB de incremento
+       en la entrada se traducen en 1 dB de incremento en la salida para los
+       segmentos de señal que superan el threshold.
+
+       Un ratio de 4:1 significa que si la entrada supera el threshold en 8 dB,
+       la salida lo superará en 2 dB. Un ratio de infinito:1 constituye el caso
+       límite denominado limiting: ningún incremento de entrada produce
+       incremento de salida. Ratios menores a 2:1 producen compresión suave;
+       valores entre 4:1 y 8:1 son compresión moderada-agresiva; valores
+       superiores a 10:1 aproximan el comportamiento de limitador.
+
+ATTACK
+       Expresado en milisegundos. Define el tiempo que tarda el circuito de
+       reducción de ganancia en alcanzar el valor requerido una vez que la señal
+       supera el threshold. Valores bajos (0.1 ms – 5 ms) permiten capturar
+       transientes rápidos. Valores altos (20 ms – 150 ms) dejan pasar el
+       ataque inicial antes de que comience la compresión, preservando el
+       punch percusivo de la señal.
+
+       Un attack excesivamente rápido combinado con un ratio alto puede distorsionar
+       la forma de onda al recortar transientes sub-ciclo.
+
+RELEASE
+       Expresado en milisegundos. Define el tiempo que tarda el circuito de
+       reducción de ganancia en retornar a la unidad una vez que la señal
+       desciende por debajo del threshold. Valores bajos producen pumping audible
+       y comportamiento errático en material con muchos picos. Valores altos
+       mantienen la ganancia reducida por períodos prolongados, aplanando el
+       rango dinámico de manera más sostenida.
+
+       Algunos diseños implementan release automático (auto-release o program-
+       dependent release), donde la constante de tiempo varía en función de la
+       duración e intensidad del material que superó el threshold.
+
+KNEE
+       Parámetro que controla la suavidad de la transición entre la región lineal
+       (sin compresión) y la región de compresión (sobre el threshold). Expresado
+       en dB.
+
+       Knee = 0 dB: la compresión comienza abruptamente en el threshold (hard knee).
+       El cambio de pendiente en la curva ganancia/entrada es discontinuo.
+
+       Knee > 0 dB: la compresión comienza gradualmente en un rango centrado
+       alrededor del threshold. Para un knee de X dB, el procesamiento comienza
+       a aplicarse desde (threshold - X/2) y alcanza el ratio completo en
+       (threshold + X/2). Esto produce una curva de transferencia continua y
+       diferenciable (soft knee).
+
+MAKEUP GAIN
+       Expresado en dB. Ganancia aplicada a la salida del compresor para
+       compensar la pérdida de nivel producida por la reducción dinámica. El
+       valor óptimo de makeup gain puede calcularse como aproximación:
+
+           makeup ≈ (threshold × (1 - 1/ratio)) × (-1)
+
+       Este cálculo es una estimación válida solo para señales que se mantienen
+       de forma sostenida sobre el threshold. En práctica, el ajuste por oído o
+       mediante análisis de nivel medio (LUFS) es más preciso.
+
+───────────────────────────────────────────────────────────────────────────────
+
+DETECTOR Y MODOS DE OPERACIÓN
+
+SIDECHAIN
+       El detector puede recibir la señal desde la cadena principal (operación
+       normal) o desde una señal externa (sidechain externo). En el segundo caso,
+       el nivel de la señal sidechain controla la reducción de ganancia aplicada
+       a la cadena principal. Esto permite, por ejemplo, ducking: reducir el nivel
+       de una pista de música cuando el detector recibe la señal de voz de un
+       locutor.
+
+DETECCIÓN DE NIVEL
+       El detector evalúa el nivel de la señal mediante alguno de los siguientes
+       métodos:
+
+       Peak detection: responde al valor de pico instantáneo de la forma de onda.
+       Más preciso para proteger ante clipping, pero más errático en material
+       complejo.
+
+       RMS detection: responde al valor eficaz calculado sobre una ventana de
+       tiempo. Más cercano a la percepción auditiva de loudness. Produce
+       comportamiento más musical en compresión de rango dinámico general.
+
+       True peak detection: evalúa el nivel interpolado entre muestras para
+       capturar los intersample peaks no visibles en la representación digital
+       discreta. Relevante para compresión limitadora en etapas de mastering.
+
+LOOKAHEAD
+       Retardo introducido deliberadamente en la cadena de señal para que el
+       detector pueda anticiparse al material antes de que llegue al circuito de
+       ganancia. Permite attack efectivo de 0 ms sin distorsión de transientes,
+       ya que el control de ganancia se aplica al audio retardado que aún no ha
+       pasado. Introduce latencia equivalente al valor de lookahead configurado.
+
+───────────────────────────────────────────────────────────────────────────────
+
+CURVA DE TRANSFERENCIA
+
+       La relación entre nivel de entrada (x) y nivel de salida (y) del compresor
+       se describe mediante la función de transferencia estática (sin considerar
+       los efectos temporales de attack y release):
+
+       Para x <= threshold (hard knee):
+           y = x
+
+       Para x > threshold (hard knee):
+           y = threshold + (x - threshold) / ratio
+
+       Para soft knee con ancho W centrado en el threshold T:
+           Si (x - T) < -W/2:        y = x
+           Si (x - T) >= W/2:        y = T + (x - T) / ratio
+           En el rango intermedio:   interpolación cuadrática
+
+       La pendiente de la curva en la región comprimida es 1/ratio. Un ratio de
+       infinito:1 produce pendiente 0, es decir, salida constante igual a
+       threshold independientemente del nivel de entrada.
+
+───────────────────────────────────────────────────────────────────────────────
+
+GANANCIA DE REDUCCIÓN (GAIN REDUCTION)
+
+       La ganancia de reducción (GR) en un instante dado expresa la atenuación
+       actualmente aplicada a la señal, en dB. Es un valor negativo o cero.
+
+           GR = y - x = (threshold + (x - threshold) / ratio) - x
+              = threshold × (1 - 1/ratio) - x × (1 - 1/ratio)
+              = (1 - 1/ratio) × (threshold - x)
+
+       El medidor de GR presente en la mayoría de compresores físicos y virtuales
+       muestra este valor en tiempo real. La lectura máxima de GR bajo condiciones
+       de operación típicas es un indicador de cuánta compresión dinámica se está
+       aplicando.
+
+───────────────────────────────────────────────────────────────────────────────
+
+ARTEFACTOS Y COMPORTAMIENTO NO DESEADO
+
+PUMPING
+       Variación audible del nivel de la señal causada por un release demasiado
+       corto en relación con el tempo o las características espectrales del
+       material. El compresor libera ganancia y la recupera de forma cíclica y
+       perceptible. Puede ser efecto buscado (técnica side-chain en música
+       electrónica) o artefacto indeseado.
+
+BREATHING
+       Similar al pumping pero percibido principalmente como cambio en el fondo
+       de ruido de la señal. El nivel del ruido sube cuando el compresor suelta
+       la ganancia y baja cuando la aplica. Particularmente audible en registros
+       con relación señal-ruido baja.
+
+DISTORSIÓN POR ATTACK EXCESIVAMENTE RÁPIDO
+       Si el attack es suficientemente corto para actuar dentro de un ciclo de
+       la frecuencia fundamental de la señal, la forma de onda resulta asimétrica.
+       La ganancia de reducción varía sub-ciclo, introduciendo contenido armónico
+       no lineal perceptible como distorsión.
+
+INTERMODULACIÓN EN SIDECHAIN
+       Cuando el sidechain contiene múltiples componentes de frecuencia de nivel
+       similar, las variaciones de ganancia modulan la cadena principal a las
+       frecuencias diferenciales e intermodulares del contenido del sidechain.
+       En escenarios de multibanda, el sidechain debe filtrarse adecuadamente
+       para aislar la banda de interés.
+
+───────────────────────────────────────────────────────────────────────────────
+
+VARIANTES
+
+COMPRESOR MULTIBANDA
+       Divide la señal en N bandas de frecuencia mediante un banco de filtros y
+       aplica compresión independiente a cada banda. La división puede realizarse
+       mediante filtros de fase lineal (mayor latencia, sin distorsión de fase)
+       o filtros IIR de respuesta de fase mínima (baja latencia, distorsión de
+       fase entre bandas). La señal se reconstruye sumando las bandas
+       procesadas. Permite abordar problemas de dinámica espectralmente
+       localizados sin afectar el comportamiento del resto del espectro.
+
+COMPRESOR PARALELO (NY COMPRESSION)
+       Mezcla la señal original sin procesar con la señal fuertemente comprimida.
+       La señal comprimida aporta sustain y densidad; la señal directa preserva
+       los transientes. El resultado es una mayor densidad percibida sin la
+       pérdida de punch característica de la compresión convencional agresiva.
+
+LIMITADOR
+       Caso especial de compresor con ratio muy alto (típicamente mayor a 10:1,
+       a menudo infinito:1) y attack extremadamente rápido. Su función es
+       impedir que la señal supere un nivel de salida máximo. El true peak limiter
+       incorpora sobremuestreo para detectar y atenuar los intersample peaks.
+
+COMPRESOR UPWARD
+       Eleva el nivel de segmentos por debajo del threshold hacia el threshold,
+       reduciendo el rango dinámico desde abajo. Opuesto al compresor
+       convencional (downward compressor). Menos común; utilizado en restauración
+       de audio o efectos creativos.
+
+EXPANDER / GATE
+       Funciona de manera inversa al compresor: aumenta el rango dinámico
+       atenuando las señales que caen por debajo del threshold. El gate es el
+       caso límite de ratio infinito hacia abajo: señales bajo el threshold son
+       silenciadas. Utilizado para eliminar ruido de fondo entre eventos sonoros.
+
+───────────────────────────────────────────────────────────────────────────────
+
+PARADIGMAS DE CONTROL DE GANANCIA
+
+       El elemento central de cualquier compresor analógico es el VCA (voltage-
+       controlled amplifier) o su equivalente funcional: el circuito que
+       físicamente reduce la ganancia de la señal en respuesta a una tensión de
+       control. La naturaleza electrónica de este elemento determina la topología
+       del compresor, su comportamiento temporal, su carácter sonoro, y sus
+       limitaciones. Los paradigmas principales son óptico, FET, VCA de estado
+       sólido y válvula (tubo).
+
+ÓPTICO (OPTO)
+       El control de ganancia se realiza mediante un par fotoacoplador: una
+       fuente de luz (originalmente una lámpara de incandescencia, posteriormente
+       LED o electroluminiscente) cuya intensidad varía con la señal de control,
+       y una célula fotorresistiva (LDR, light-dependent resistor) que cambia su
+       resistencia en función de la luz recibida. La variación de resistencia
+       de la LDR produce la atenuación de la señal.
+
+       La característica definitoria del diseño óptico es la inercia del par
+       fotoacoplador: la LDR no responde instantáneamente a cambios en la fuente
+       de luz, y su tiempo de recuperación (oscurecimiento) es más lento que su
+       tiempo de excitación (iluminación). Esta asimetría produce un comportamiento
+       de attack y release no lineal e interdependiente que no puede modelarse
+       con precisión mediante constantes de tiempo fijas. El release depende de
+       cuánto tiempo estuvo iluminada la célula: exposiciones breves producen
+       release más rápido; exposiciones prolongadas o intensas producen release
+       más lento, ya que la LDR retiene calor residual. Este fenómeno se denomina
+       program-dependent release y es inherente al material, no un parámetro
+       configurable.
+
+       La curva de transferencia del opto tiende a ser suave y sin knee abrupto,
+       produciendo compresión que se describe comúnmente como transparente o
+       musical. Dado que el detector opera por realimentación (feedback), la
+       compresión responde al nivel sostenido más que a los picos instantáneos,
+       lo que preserva transientes de forma natural incluso con controles ajustados
+       agresivamente.
+
+       Referencias hardware representativas:
+
+       Teletronix LA-2A (1962, Universal Audio). Compresor de tubo con elemento
+       de ganancia T4 (par fotoacoplador propietario con electroluminiscente y LDR).
+       Dos únicos controles: peak reduction y output. Sin parámetros de attack
+       ni release. El ratio no es fijo; varía aproximadamente entre 3:1 y 6:1
+       según el nivel de entrada. Diseñado para voz; su sonido es ampliamente
+       asociado a la compresión natural y sin esfuerzo.
+
+       Universal Audio LA-3A. Variante transistorizada del LA-2A. Reemplaza la
+       etapa de amplificación de tubo por circuitería de estado sólido, manteniendo
+       el elemento óptico T4. Comportamiento similar al LA-2A pero con carácter
+       ligeramente más rápido y articulado. Ratio nominal 3:1 con reducción máxima
+       de ganancia mayor que el LA-2A.
+
+       Empirical Labs EL8 Distressor. Diseño moderno de estado sólido con elemento
+       óptico en modos específicos. Ofrece varios modos de ratio incluyendo
+       emulación de comportamiento opto y un modo Nuke (ratio extremo). Destaca
+       por su versatilidad y su capacidad de introducir distorsión armónica
+       controlada independientemente del nivel de compresión.
+
+FET (FIELD-EFFECT TRANSISTOR)
+       El transistor de efecto de campo opera como resistencia variable controlada
+       por tensión de puerta. En un compresor FET, el transistor se inserta en
+       el camino de señal o en un divisor de tensión, y la señal de control varía
+       la resistencia drain-source del FET, atenuando la señal de audio.
+
+       La ventaja principal del FET es la velocidad de respuesta: los tiempos de
+       attack alcanzables son extremadamente cortos (por debajo de 20 microsegundos
+       en diseños como el 1176), lo que permite capturar transientes que ningún
+       otro paradigma puede controlar. Esta velocidad, combinada con la naturaleza
+       no lineal de la característica I-V del FET, introduce distorsión armónica
+       de orden bajo que se percibe como color o carácter.
+
+       El detector en diseños FET clásicos opera en modo feedforward con detección
+       de peak. La curva de transferencia puede ser agresiva con knee duro. El
+       ratio se selecciona discretamente entre valores fijos. La interacción entre
+       attack, release y ratio produce comportamientos complejos: activar todos
+       los botones de ratio simultáneamente en el 1176 (modo all-buttons o
+       british mode) colapsa el circuito de control en un estado de
+       sobrecompresión no documentado con pumping pronunciado y distorsión
+       armónica que muchos ingenieros emplean deliberadamente como efecto.
+
+       Referencias hardware representativas:
+
+       UREI 1176LN (1967, Universal Audio). El compresor FET de referencia. Cuatro
+       ratios seleccionables (4:1, 8:1, 12:1, 20:1), attack de 20 µs a 800 µs,
+       release de 50 ms a 1.1 s. Transformadores de entrada y salida en las
+       revisiones originales (Rev A–D); revisiones posteriores (E en adelante)
+       modificaron el diseño del transformador. Las distintas revisiones (Rev A,
+       D, E, F) tienen diferencias de sonido documentadas y discutidas en detalle
+       en bibliografía técnica de ingeniería de audio.
+
+       Purple Audio MC77. Recreación del 1176 con modificaciones en la topología
+       de control para mayor consistencia de unidad a unidad. Utilizado en
+       aplicaciones donde la predictibilidad del comportamiento es prioritaria.
+
+       Warm Audio WA76. Variante de bajo coste del 1176 con circuitería cercana
+       al original. Transformadores lundahl opcionales. Utilizado para docenas de
+       aplicaciones de tracking en estudios de presupuesto limitado.
+
+VCA (VOLTAGE-CONTROLLED AMPLIFIER) DE ESTADO SÓLIDO
+       El VCA de estado sólido es un circuito integrado especializado cuya ganancia
+       varía linealmente en dB por volt de señal de control. A diferencia del FET,
+       la respuesta del VCA es altamente lineal y predecible. Los chips más
+       utilizados históricamente son los diseños dbx (2150, 2155, VCA2), el THAT
+       2180 (sucesor directo del dbx), y los diseños SSM. La linealidad del VCA
+       permite implementar curvas de transferencia precisas, controles exactamente
+       calibrados y comportamientos repetibles entre unidades.
+
+       El paradigma VCA domina en diseños de bus y rack de alta densidad. Su
+       distorsión es baja, su headroom elevado, y su velocidad de respuesta
+       intermedia entre el FET y el opto. El carácter sonoro es típicamente
+       descrito como transparente o claro, aunque diseños específicos manipulan
+       los circuitos de detección y la topología de feedback para imprimir
+       coloración propia.
+
+       El SSL G Bus Compressor utiliza el chip VCA de la consola SSL 4000. La
+       topología de feedback y el sidechain filtrado (high-pass a 60 Hz para
+       evitar que el bajo domine el detector) confieren un comportamiento de
+       adherencia o "glue" entre los elementos de una mezcla que ha convertido
+       al G Bus en referencia para compresión de mezcla.
+
+       Referencias hardware representativas:
+
+       dbx 160A. Diseño VCA feedforward con curva de transferencia hard knee. El
+       detector de RMS proporciona integración temporal que suaviza la respuesta
+       en material complejo. Ratio variable hasta infinito:1. Muy utilizado en
+       aplicaciones de grabación de batería por su carácter agresivo y preciso.
+
+       dbx 160VU / 160X. Variantes del 160A con medición en VU y modificaciones
+       menores en el sidechain. El 160X agrega overeas protection y una función
+       de threshold automático.
+
+       SSL G Bus Compressor. Originalmente integrado en el bus master de las
+       consolas SSL 4000G. Attack de 0.1 ms a 30 ms, release de 0.1 s a 1.2 s
+       más auto, ratios de 2:1 a 10:1. El make-up gain está integrado al diseño
+       de la consola. Versiones standalone (SSL G-Master Buss Compressor) replican
+       el circuito original en formato de rack. Referencia de facto para bus
+       compressor en mezcla.
+
+       API 2500. VCA con transformer balancing y topología de thrust sidechain
+       que permite ajustar la respuesta en frecuencia del detector independiente
+       de la señal de audio. Dos modos de knee (hard/soft) y dos modos de
+       detección (feedforward/feedback). Utilizado extensamente en bus de mezcla
+       y grupos de batería.
+
+       Neve 33609 / 2254. Diseño de estado sólido de Neve con VCA y transformadores
+       de alta calidad. Topología de feedback que produce compresión suave con
+       carácter propio asociado al sonido British. El 33609 fue el bus compressor
+       estándar en las consolas Neve 8078 y 8028.
+
+VÁLVULA / TUBO (VARI-MU)
+       El Vari-Mu (variable mutual conductance) utiliza tubos de vacío operando
+       en la región no lineal de su curva característica para producir reducción
+       de ganancia. A diferencia de los paradigmas anteriores, no existe un
+       circuito de control de ganancia separado: el tubo actúa simultáneamente
+       como amplificador de señal y como elemento de ganancia variable. La señal
+       de control (señal rectificada derivada de la salida) sesga el grid de
+       control del tubo, desplazando su punto de operación hacia regiones de menor
+       transconductancia.
+
+       La compresión Vari-Mu es inherentemente suave: el ratio efectivo varía
+       entre aproximadamente 1.5:1 en niveles bajos y valores más altos en niveles
+       elevados. No existe un threshold discreto; la compresión comienza a
+       cualquier nivel y aumenta progresivamente. Esta característica elimina el
+       concepto de knee en su forma convencional: la curva de transferencia es
+       continua y gradual en todo su rango. El attack y el release son lentos en
+       comparación con FET y VCA, gobernados por las constantes de tiempo de los
+       circuitos de bias del tubo.
+
+       La distorsión armónica introducida por la operación del tubo en región
+       no lineal es parte inherente del sonido del Vari-Mu. La segunda armónica
+       predomina, añadiendo calidez percibida a la señal comprimida. Esta
+       coloración lo hace más adecuado para aplicaciones de bus final o mastering
+       donde se busca cohesión y carácter, que para aplicaciones de control
+       dinámico preciso.
+
+       Referencias hardware representativas:
+
+       Fairchild 670 (1959). Considerado el compresor de mayor calidad jamás
+       construido por muchos ingenieros. Procesamiento dual mono o stereo linkeable.
+       Seis tiempos de release preconfigurados y un modo de release automático.
+       Transformadores de salida de altísima calidad. Los Fairchild originales
+       operativos se cotizan entre 30.000 y 150.000 USD en el mercado de segunda
+       mano. Las unidades de referencia son las empleadas en Abbey Road Studios.
+
+       Fairchild 660. Versión mono del 670. Igual circuitería, menor coste
+       histórico. Comportamiento de attack extremadamente rápido para un diseño
+       de tubo (del orden de 0.2 ms en la posición más rápida).
+
+       Manley Variable Mu. Diseño contemporáneo de Vari-Mu con tubo 5670 en la
+       etapa de ganancia variable y transformadores de salida Manley. Dos modos
+       de detección (link o dual mono) y control de threshold independiente por
+       canal. Referencia estándar en cadenas de mastering de nivel profesional.
+
+       Thermionic Culture The Vulture. Diseño de tubo con múltiples válvulas en
+       la trayectoria de señal. Comportamiento Vari-Mu con mayor opciones de
+       configuración que los diseños clásicos.
+
+TRANSFORMACIONAL (TRANSFORMADOR COMO ELEMENTO DE GANANCIA)
+       Algunos diseños utilizan la saturación no lineal del núcleo de un
+       transformador como mecanismo primario o secundario de control dinámico.
+       El transformador no es un VCA en sentido estricto, pero opera como limitador
+       suave cuando la señal induce saturación en el núcleo. Este fenómeno es
+       secundario en la mayoría de diseños con transformador (donde contribuye a
+       la coloración), pero en diseños específicos es el mecanismo principal.
+
+       El compresor de tubo con transformadores de alta calidad (Fairchild, Pultec
+       MEQ-5 modificado, algunos diseños Neve) combina la compresión Vari-Mu o
+       VCA con la limitación suave del transformador, produciendo dos mecanismos
+       de control dinámico operando en paralelo en distintos rangos de nivel.
+
+───────────────────────────────────────────────────────────────────────────────
+
+INTEGRACIÓN EN CADENA DE SEÑAL
+
+       El compresor se inserta típicamente en la cadena de procesamiento en
+       alguno de los siguientes puntos:
+
+       Insert directo: procesamiento en serie dentro de la cadena de señal de
+       una pista o bus. Todo el audio de la pista pasa por el compresor.
+
+       Auxiliar paralelo: la señal se envía a un canal auxiliar mediante un
+       send, se procesa, y se mezcla con la señal original. Este esquema facilita
+       el ajuste de la cantidad de compresión sin afectar el nivel general
+       mediante el balance entre wet y dry.
+
+       Sidechain externo: la señal de control proviene de una pista diferente.
+       El routing exacto depende de la implementación del entorno de audio.
+
+───────────────────────────────────────────────────────────────────────────────
+
+CONSIDERACIONES DE IMPLEMENTACIÓN DIGITAL
+
+DOMINIO DISCRETO Y DIFERENCIAS FUNDAMENTALES CON EL ANALÓGICO
+
+       La implementación digital de un compresor introduce diferencias estructurales
+       derivadas de la naturaleza discreta del procesamiento que no pueden
+       eliminarse mediante mejor hardware, sino solo gestionarse con diseño
+       algorítmico adecuado.
+
+       La detección de nivel opera sobre bloques de muestras (procesamiento por
+       buffer) o muestra a muestra (procesamiento en línea). En el procesamiento
+       por buffer, la ganancia de reducción se calcula una vez por bloque a partir
+       del nivel máximo o RMS del bloque completo y se aplica uniformemente a
+       todas las muestras del bloque. Esto produce escalonamiento de ganancia a
+       la frecuencia de actualización de bloques (sample_rate / block_size),
+       audible como distorsión de intermodulación de baja frecuencia si el bloque
+       es largo. El procesamiento muestra a muestra elimina este artefacto pero
+       incrementa la carga computacional y puede introducir inestabilidades en
+       el lazo de control si el algoritmo no gestiona adecuadamente la retroalimentación.
+
+       Un attack de 0 ms en dominio digital significa que la ganancia de reducción
+       se aplica en la primera muestra que supera el threshold. Esto es
+       funcionalmente distinto al comportamiento analógico: ningún circuito opera
+       con tiempo de respuesta cero, y los compresores analógicos de attack rápido
+       (FET) tienen constantes de tiempo gobernadas por capacitores y resistencias,
+       no por la frecuencia de muestreo. La compresión sub-muestra no existe en
+       el dominio analógico.
+
+CONSTANTES DE TIEMPO DISCRETAS
+
+       Las constantes de tiempo attack y release se implementan típicamente como
+       filtros de envolvente de primer orden (equivalente al circuito RC analógico)
+       aplicados sobre la señal rectificada de control. La función de transferencia
+       en dominio Z de este filtro es:
+
+           H(z) = (1 - α) / (1 - α·z⁻¹)
+
+       donde el coeficiente α se obtiene a partir de la constante de tiempo τ
+       (en segundos) y la frecuencia de muestreo fs:
+
+           α = exp(-1 / (τ · fs))
+
+       Para τ = 10 ms a fs = 44100 Hz:
+           α = exp(-1 / 441) ≈ 0.99773
+
+       Un valor de α próximo a 1 produce un filtro con polo muy cercano al
+       círculo unitario, es decir, respuesta lenta. Un valor de α próximo a 0
+       produce respuesta inmediata.
+
+       Dado que attack y release tienen constantes de tiempo independientes, el
+       filtro de envolvente utiliza dos coeficientes distintos: α_attack cuando
+       la envolvente crece (señal por encima de la envolvente actual) y α_release
+       cuando decrece. El algoritmo de selección es:
+
+           si env[n-1] < abs(x[n]):
+               env[n] = α_attack · env[n-1] + (1 - α_attack) · abs(x[n])
+           sino:
+               env[n] = α_release · env[n-1]
+
+       Esta implementación produce discontinuidades en la derivada de la envolvente
+       en los puntos de transición entre regímenes, perceptibles en ciertos
+       materiales como clicking o distorsión de modulación. Implementaciones más
+       sofisticadas suavizan esta transición con un filtro de tercer orden o con
+       histéresis en el comparador attack/release.
+
+PROCESAMIENTO EN ESCALA LOGARÍTMICA
+
+       La operación del compresor en dB requiere conversión entre dominio lineal
+       (muestras de audio) y dominio logarítmico (dB). Existen dos estrategias:
+
+       Procesar en dominio lineal: la señal de control se expresa como factor de
+       ganancia lineal (0 a 1), y la curva de transferencia se implementa en
+       términos de amplitud lineal. La ventaja es que la multiplicación de ganancia
+       es directa. La desventaja es que la curva de transferencia expresada en dB
+       (lineal en eje logarítmico) requiere cálculo de logaritmos para evaluar
+       dónde está el threshold y cuánta reducción aplicar, o una aproximación
+       polinómica que introduce error.
+
+       Procesar en dominio logarítmico (dB): la envolvente detectada se convierte
+       a dB, la curva de transferencia se evalúa directamente en ese dominio
+       (operación trivial), y el factor de ganancia resultante se convierte de
+       vuelta a lineal para la multiplicación. Este esquema es más natural para
+       implementar el threshold y el ratio con precisión, pero requiere dos
+       conversiones por muestra (log y antilog), costosas computacionalmente en
+       hardware sin FPU dedicada.
+
+       La mayoría de implementaciones de software emplean el dominio logarítmico
+       con aproximaciones eficientes de log2 mediante lookup tables o instrucciones
+       SIMD. La precisión de estas aproximaciones afecta la forma del knee en la
+       curva de transferencia.
+
+SOBREMUESTREO
+
+       El sobremuestreo (oversampling) en compresores digitales tiene dos
+       motivaciones distintas que no deben confundirse:
+
+       Primera motivación: detección de intersample peaks. Las muestras digitales
+       representan puntos de una señal continua; la amplitud real entre muestras
+       puede superar la amplitud de cualquier muestra individual, especialmente
+       en señales de alta frecuencia con fases específicas. El sobremuestreo para
+       detección de true peak (típicamente 4x o mayor, con interpolación sinc)
+       permite identificar estos picos reales antes de que produzcan clipping en
+       la reconstrucción DAC. Es relevante principalmente en limitadores de salida.
+
+       Segunda motivación: reducción de aliasing en la señal de control. Las
+       variaciones rápidas de ganancia (attack corto, material percusivo) modulan
+       la señal de audio a frecuencias que pueden caer dentro del rango audible
+       o, si el attack es suficientemente corto, superar la frecuencia de Nyquist
+       y producir aliasing. El sobremuestreo del procesamiento completo (señal
+       de audio y señal de control) desplaza estos artefactos a frecuencias más
+       altas, donde pueden eliminarse con el filtro de diezmado. El coste es
+       proporcional al factor de sobremuestreo en carga computacional.
+
+       En implementaciones de plugin de software, el sobremuestreo a 4x (176.4
+       o 192 kHz efectivos partiendo de 44.1/48 kHz) es práctica común. A 8x
+       los beneficios adicionales son marginales en la mayoría de materiales y
+       el incremento de latencia comienza a ser limitante en aplicaciones de
+       monitorización en tiempo real.
+
+LATENCIA Y COMPENSACIÓN
+
+       La latencia total introducida por un compresor digital es la suma de:
+
+           L_total = L_lookahead + L_oversampling + L_buffer
+
+       L_lookahead: retardo explícito de la señal de audio para permitir
+       anticipación del detector. Es el parámetro de lookahead configurado.
+
+       L_oversampling: latencia de los filtros de sobremuestreo (upsampling) y
+       diezmado (downsampling). Para filtros FIR de fase lineal a 4x, la latencia
+       típica es del orden de 64 a 256 muestras a la frecuencia de proyecto.
+       Filtros IIR (fase mínima) reducen la latencia pero introducen distorsión
+       de fase en la región de transición que puede afectar la fase relativa de
+       la envolvente de compresión respecto a la señal.
+
+       L_buffer: latencia del buffer de procesamiento del host. En plugins de DAW,
+       esto corresponde al tamaño de buffer configurado en las preferencias del
+       sistema.
+
+       Los DAW modernos implementan compensación automática de latencia de plugin
+       (PDC, plugin delay compensation). Sin embargo, la PDC opera sobre buffers
+       enteros y puede producir desalineación sub-buffer cuando la latencia no
+       es múltiplo exacto del tamaño de buffer. En sesiones con múltiples instancias
+       de compresores con latencias distintas, la verificación manual de alineación
+       mediante análisis de forma de onda es recomendable.
+
+EMULACIÓN ANALÓGICA
+
+       Los plugins que emulan comportamiento analógico (opto, FET, Vari-Mu)
+       modelan los aspectos no lineales y dependientes del nivel que distinguen
+       a los paradigmas analógicos descritos anteriormente. Las técnicas más
+       comunes son:
+
+       Modelado de la curva de transferencia dinámica del opto: la constante de
+       tiempo de release se implementa como función del historial de nivel de
+       la señal de control, replicando el comportamiento de retención térmica de
+       la LDR. Algunos plugins miden la energía acumulada sobre el par fotoacoplador
+       virtual con una constante de descarga exponencial adicional.
+
+       Modelado de saturación del transformador: la distorsión armónica producida
+       por la saturación del núcleo se implementa mediante funciones de waveshaping
+       aplicadas a la señal de audio en la etapa de salida. Las funciones típicas
+       son la función tanh o polinomios de Chebyshev de orden bajo. El coeficiente
+       de saturación puede variar con el nivel de señal para replicar la saturación
+       progresiva del núcleo real.
+
+       Modelado de variación de ganancia sub-ciclo del FET: la no linealidad de
+       la característica I-V del transistor de efecto de campo se aproxima mediante
+       tablas de lookup o funciones polinómicas del voltaje de control. Cuando
+       el attack es suficientemente corto para actuar dentro de un ciclo de la
+       frecuencia fundamental, el modelado sub-ciclo produce la asimetría de forma
+       de onda característica del 1176 en modos agresivos.
+
+       Modelado de noise floor y crosstalk: algunos emuladores añaden ruido de
+       amplificador calibrado para reproducir el piso de ruido del hardware
+       original, y crosstalk entre canales calibrado a partir de mediciones en
+       unidades reales. Estos elementos son perceptualmente secundarios pero
+       contribuyen a la firma sonora en contextos de mezcla densa.
+
+PRECISIÓN NUMÉRICA Y ARTEFACTOS DE CUANTIZACIÓN
+
+       El procesamiento en punto flotante de 32 bits (simple precisión) ofrece
+       aproximadamente 24 bits de mantisa, suficiente para señales de audio
+       nominales. Sin embargo, la señal de control de ganancia opera en rangos
+       dinámicos que pueden superar los 120 dB, y las multiplicaciones sucesivas
+       de factores de ganancia muy pequeños pueden acumular error de redondeo
+       significativo en implementaciones de 32 bits. El procesamiento interno en
+       64 bits (doble precisión) elimina este problema con un coste de cómputo
+       adicional de aproximadamente 1.5x a 2x en arquitecturas x86-64 modernas
+       con SIMD.
+
+       Las implementaciones en punto fijo (DSP dedicado, algunos formatos de
+       hardware embebido) requieren resolución mínima de 24 bits para la señal
+       de audio y 32 bits para la señal de control de ganancia. La representación
+       del factor de ganancia en punto fijo de rango reducido produce escalones
+       audibles en el control de ganancia durante el release lento, perceptibles
+       como zipper noise.
+
+───────────────────────────────────────────────────────────────────────────────
+
+VÉASE TAMBIÉN
+
+       limitador(1), gate(1), expander(1), ecualizador(1), procesamiento_dinamico(7)
+
+───────────────────────────────────────────────────────────────────────────────
+
+                          PROCESAMIENTO DE SEÑAL DE AUDIO
+
+
+
+
+El compresor es un dispositivo de procesamiento para el control del rango dinámico. La señal de audio contiene variaciones de nivel tanto intencionales como no intencionales; la mayor parte del contenido tímbrico de un instrumento o voz reside en los niveles por debajo de los transientes y picos.
+El compresor requiere dos capacidades de operación: un mecanismo de detección del nivel de la señal de entrada y un mecanismo de aplicación de ganancia variable en función de ese nivel. Los dispositivos de ganancia variable ajustan su atenuación o amplificación según el nivel de entrada. Existen herramientas dedicadas a la medición e indicación de este nivel.
+El compresor reduce variaciones de nivel no deseadas que, de otro modo, comprometerían el balance de un instrumento dentro de una mezcla. Cuando el nivel del ambiente interfiere con la señal principal, la compresión estabiliza la relación entre ambas. El posicionamiento del micrófono debe determinarse según la lectura del medidor de nivel, no por criterios visuales o de proximidad física.
+La compresión es una operación de procesamiento de señal de audio que reduce el nivel de los segmentos de mayor amplitud, amplifica los de menor amplitud, o aplica ambas acciones en combinación, reduciendo el rango dinámico total de la señal.
+
+ Un compresor instancia ideas para el control del rango dinámico.
+ El audio tiene diferencias de volumen deseadas y no deseadas.
+ Gran parte del carácter de la música o voz está contenido por debajo de los ataques o picos _1 \n Existen herramientas para controlar e indicar el volumen. \n Hay dispositivos que varían su ganancia dependiendo del nivel de la señal de entrada. Para ello, el compresor, primero debe tener algún método para determinar el nivel de la señal, y luego debe ser capaz de utilizarlo para controlar la ganancia._2 \n Puede alterar las variaciones indeseables del nivel de la señal que, de otro modo, dificultarían a un instrumento mantener su balance al ensamblarse con otros instrumentos. _3\n La compresión ayuda a regular las proporciones cuando el audio de fondo se convierte en distractor. \n La posición del micrófono se debe intencionar según el medidor y no lo visual. \n Existen operaciónes de procesamiento de la señal de audio en las cuales se reduce el volumen de los sonidos fuertes o amplifica los sonidos leves, reduciendo o comprimiendo el rango dinámico de una señal de audio _4 \n http://www.tube-tech.com/wp-content/uploads/2018/05/Manual-CL-1B-180515.pdf
+ 1) https://dbxpro.com/en/product_documents/160-161-owners-manualpdf--2
+     2) https://media.uaudio.com/assetlibrary/l/a/la-2a_manual.pdf
+         3) http://library.lol/main/1BAB1DDA8F0B25EBC2493A0A7A9F3A2E
+             4) https://vintageking.com/blog/2017/09/compressors-guide/ \n
